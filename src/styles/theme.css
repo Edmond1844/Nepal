@@ -1,0 +1,28 @@
+:root {
+    /* Light Theme */
+    --light-bg: #f8fafb;
+    --light-bg-secondary: #ffffff;
+    --light-accent: #0891b2;
+    --light-text-primary: #1a2332;
+    --light-text-secondary: #4a5568;
+    
+    /* Dark Theme */
+    --dark-bg: #1a1f2e;
+    --dark-bg-secondary: #242b3d;
+    --dark-accent: #06b6d4;
+    --dark-text-primary: #f7fafc;
+    --dark-text-secondary: #cbd5e0;
+
+    /* Neon Theme */
+    --neon-bg: #0d1117;
+    --neon-bg-secondary: #161b2e;
+    --neon-accent: #00d9ff;
+    --neon-text-primary: #e6f1ff;
+    --neon-text-secondary: #bfdbfe;
+
+    /* Level Colors */
+    --level-beginner: #10b981; 
+    --level-intermediate: #f59e0b;
+    --level-advanced: #ef4444;  
+    --level-expert: #8b5cf6;
+}
