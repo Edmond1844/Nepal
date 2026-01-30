@@ -25,4 +25,22 @@
     --level-intermediate: #f59e0b;
     --level-advanced: #ef4444;  
     --level-expert: #8b5cf6;
+
+
+    /* Шрифты */
+    --font-inter: 'Inter', sans-serif;
+    
+    /* Толщина шрифтов */
+    --fw-regular: 400;
+    --fw-medium: 500;  
+    --fw-semibold: 600; 
+    --fw-bold: 700;
+    
+    /* Стили */
+    --fs-normal: normal;
+    --fs-italic: italic;
 }
+/* шрифты 
+
+Poppins: bold 
+*/
