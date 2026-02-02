@@ -1,7 +1,10 @@
-.title {
-  color: var(--title);
+body {
+  background-color: var(--dark-bg);
+}
 
-  font-family: var(--font-inter);
-  font-style: var(--fs-italic);
-  font-weight: var(--fw-bold)
+.title {
+  font: var(--h1-style);
+  color: var(--light-secondary);
+  text-shadow: 0 0 10px var(--neon-accent);
+  text-align: center;
 }
