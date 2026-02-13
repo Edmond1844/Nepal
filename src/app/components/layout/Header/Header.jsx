@@ -1,15 +1,18 @@
 import styles from "./Header.module.css";
-import { translations } from "../../../../data/data-languages";
-
-export default function Header({ lang }) {
-	console.log(translations);
+export default function Header({ lang, setLang, language }) {
 	return (
 		<>
 			<header>
 				<h2>
 					Nepal Peak Station
-					<span>{translations[lang].headerLogo}</span>
+					<span>{language[lang].headerLogo}</span>
 				</h2>
+
+				<button onClick={() => setLang(lang === "en" ? "ru" : "en")}>
+					{lang === "en"
+						? language.ru.language
+						: language.en.language}
+				</button>
 			</header>
 		</>
 	);
