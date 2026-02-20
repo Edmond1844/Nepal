@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
+
 export const languageRus = {
 	ru: {
-		language: "Русский",
+		language: "RU",
 
         //  Header
         headerLogo: 'Путешествие к вершинам',
+        navLinks: [
+            { to: "/tours", text: "Туры" },
+            { to: "/guides", text: "Гиды" },
+            { to: "/about-us", text: "О нас" },
+        ],
         
         // title
         title: 'Горный непал',

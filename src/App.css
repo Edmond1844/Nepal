@@ -1,10 +1,51 @@
 body {
   background-color: var(--dark-bg);
+
+  min-width: 360px;
+
+  margin: 0;
 }
 
-.title {
-  font: var(--h1-style);
-  color: var(--light-secondary);
-  text-shadow: 0 0 10px var(--neon-accent);
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  all: unset;
+  display: block; 
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li{
+  list-style: none; 
+  margin: 0;        
+  padding: 0;    
+}
+
+.container {
+  max-width: 320px;
+
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1520px;
+
+    margin: 0 auto;
+  }
 }

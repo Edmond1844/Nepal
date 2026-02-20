@@ -1,9 +1,14 @@
 export const languageEng = {
 	en: {
-		language: "English",
+		language: "EN",
 
         //  Header
         headerLogo: 'Journey to the heights',
+        navLinks: [
+            { to: "/tours", text: "Tours" },
+            { to: "/guides", text: "Guides" },
+            { to: "/about-us", text: "About us" },
+        ],
 
         // title
         title: 'Mountain Nepal',

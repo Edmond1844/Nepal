@@ -1,6 +1,88 @@
+.header {
+    background-color: var(--light-secondary);
+
+    padding: 14px 16px;
+    
+    min-height: 69px;
+}
+
+.header__wrapper_content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: var(--light-text-primary);
+    font: var(--h2-style-mobile);
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 19px;
+}
+
+.header__logo span {
+    color: var(--light-text-muted);
+
+    font-size: 10px;
+
+    line-height: 10px;
+}
+
+.header__language_button {
+    background-color: var(--transparent);
+
+    border: 1px solid var(--light-text-muted);
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+.header__burger_button {
+    padding: 0;
+
+    border: none;
+
+    background-color: var(--transparent);
+}
+
+.header__burger_menu {
+    position: absolute;
+    top: 128px;
+    left: 0;
+
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+    transition: 0.3s;
+}
+
 @media (min-width: 1440px) {
-    .header{
+    .header {
         margin: 0 auto;
         padding: 32px 50px;
+
+        background-color: var(--neon-secondary);
+    }
+
+    .header__burger_menu {
+        position: static;        
+        top: auto;              
+        left: auto;  
+        
+        padding: 0;   
+        
+        width: auto;             
+        min-height: auto;
+                        
+        display: block;           
+        align-items: normal;    
+        justify-content: normal;
     }
 }

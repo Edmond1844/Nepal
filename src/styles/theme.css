@@ -1,10 +1,12 @@
 :root {
+    --transparent: rgba(0,0,0,0);
     /* Light Theme */
     --light-bg: #f8fafb;
     --light-secondary: #ffffff;
     --light-accent: #0891b2;
     --light-text-primary: #1a2332;
     --light-text-secondary: #4a5568;
+    --light-text-muted: #718096;
     
     /* Dark Theme */
     --dark-bg: #1a1f2e;
@@ -35,13 +37,28 @@
     --fw-medium: 500;  
     --fw-semibold: 600; 
     --fw-bold: 700;
-    
+
+    /* Размеры шрифтов */
+    --text-xs: 12px;   
+    --text-sm: 14px;   
+    --text-base: 16px; 
+    --text-lg: 18px;   
+    --text-xl: 20px;  
+    --text-2xl: 24px;
+    --text-3xl: 30px;
+    --text-4xl: 36px; 
+
     /* Стили */
     --fs-normal: normal;
     --fs-italic: italic;
 
-    /* Типография */
     --h1-style: var(--fw-bold) 48px var(--font-librefranklin);
     --h2-style: var(--fw-bold) 36px var(--font-librefranklin);
     --h3-style: var(--fw-bold) 24px var(--font-librefranklin);
+
+    /* мобильная версия */
+    --h1-style-mobile: var(--fw-bold) 36px var(--font-librefranklin);
+    --h2-style-mobile: var(--fw-bold) 16px var(--font-librefranklin);
+
+    --text-style-small: var(--fw-regular) var(--fs-14) var(--font-inter);
 }
