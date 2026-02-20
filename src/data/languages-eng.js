@@ -10,8 +10,12 @@ export const languageEng = {
             { to: "/about-us", text: "About us" },
         ],
 
-        // title
+        // Hero 
         title: 'Mountain Nepal',
+        subtitlePrimary: 'Journey to the heights',
+        subtitleSecondary: 'Tours for everyone: from high-altitude tea to Everest',
+
+        buttonText: 'Select tour',
 
         // guide
         aboutGuide: '18 years of experience, 250+ ascents. Knows every stone on Everest. Tenzing is a guide you can trust your life with. Calm, unflappable, with an almost Zen-Buddhist tranquility. His phrase "Slow is fast" has become a mantra for many beginner trekkers. He knows when to stop, when to continue, and how to make every group member feel safe.',

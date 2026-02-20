@@ -52,7 +52,7 @@
     --fs-normal: normal;
     --fs-italic: italic;
 
-    --h1-style: var(--fw-bold) 48px var(--font-librefranklin);
+    --h1-style: var(--fw-bold) 64px var(--font-librefranklin);
     --h2-style: var(--fw-bold) 36px var(--font-librefranklin);
     --h3-style: var(--fw-bold) 24px var(--font-librefranklin);
 

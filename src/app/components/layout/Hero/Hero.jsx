@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { languageEng } from "../../../../data/languages-eng";
 import { languageRus } from "../../../../data/languages-rus";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import styles from "./Hero.module.css";
-import heroBackground from "../../../../images/hero/hero-mobile.png";
+import heroBackgroundMobile from "../../../../images/hero/hero-mobile.png";
+import heroBackgroundDesktop from "../../../../images/hero/hero-desktop.png";
 
 import Header from "../Header/Header";
 import MainButton from "../../ui/MainButton/MainButton";
@@ -30,19 +33,15 @@ export default function Hero() {
 				<picture className={styles.hero__picture}>
 					<source
 						media="(min-width: 1024px)"
-						// srcSet={heroBackground}
-					/>
-					<source
-						media="(min-width: 768px)"
-						// srcSet={heroBackground}
+						srcSet={heroBackgroundDesktop}
 					/>
 					<source
 						media="(min-width: 360px)"
-						srcSet={heroBackground}
+						srcSet={heroBackgroundMobile}
 					/>
 					<img
 						className={styles.hero__img}
-						src={heroBackground}
+						src={heroBackgroundMobile}
 						alt={translations[lang].title}
 					/>
 				</picture>
@@ -52,13 +51,21 @@ export default function Hero() {
 					</h1>
 					<div className={styles.hero__wrapper_subtitle}>
 						<p className={styles.hero__subtitleLarge}>
-							Путешествие к вершинам
+							{translations[lang].subtitlePrimary}
 						</p>
 						<p className={styles.hero__subtitleSmall}>
-							Туры для всех: от чая на высоте до Эвереста
+							{translations[lang].subtitleSecondary}
 						</p>
 					</div>
-					<MainButton>Выбрать тур</MainButton>
+					<Link>
+						<MainButton
+							// to="/tours/"
+							className={styles.hero__button}
+						>
+							{translations[lang].buttonText}
+							<ArrowRight className={styles.hero__icon_arrow} />
+						</MainButton>
+					</Link>
 				</div>
 			</section>
 		</>
