@@ -1,5 +1,5 @@
 body {
-  background-color: var(--);
+  background-color: var(--light-bg);
 
   min-width: 360px;
 
@@ -52,4 +52,9 @@ ul, li{
 
     margin: 0 auto;
   }
+}
+
+/* Темная тема*/ 
+body .dark {
+  background-color: var(--dark-bg);
 }

@@ -1,10 +1,27 @@
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
 
 import styles from "./Header.module.css";
 import iconBurger from "../../../../images/svg/icon-burger.svg";
 
+import iconLightTheme from "../../../../images/svg/icon-light-theme.svg";
+import iconDarkTheme from "../../../../images/svg/icon-dark-theme.svg";
+import iconNeonTheme from "../../../../images/svg/icon-neon-theme.svg";
+
 export default function Header({ lang, setLang, language }) {
 	const navLinks = language[lang].navLinks;
+
+	const themes = {
+		light: "light",
+		dark: "dark",
+		neon: "neon",
+	};
+	const [colorTheme, setColorTheme] = useState(themes.light);
+
+	function changeTheme(theme) {
+		setColorTheme(theme);
+	}
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -41,11 +58,44 @@ export default function Header({ lang, setLang, language }) {
 							<button className={styles.header__burger_button}>
 								<img src={iconBurger} alt="burger" />
 							</button>
-							<button
-								className={styles.header__toggle_theme_button}
+							<div
+								className={styles.header__theme_button_wrapper}
 							>
-								поменять цвет
-							</button>
+								<button
+									className={styles.header__theme_button}
+									onClick={() => changeTheme("light")}
+								>
+									<img
+										className={styles.header__theme_icon}
+										src={iconLightTheme}
+										alt="theme"
+									/>
+								</button>
+								<button
+									className={`${styles.header__theme_button} ${
+										colorTheme === "dark"
+											? styles.active
+											: ""
+									}`}
+									onClick={() => changeTheme("dark")}
+								>
+									<img
+										className={styles.header__theme_icon}
+										src={iconDarkTheme}
+										alt="theme"
+									/>
+								</button>
+								<button
+									className={styles.header__theme_button}
+									onClick={() => changeTheme("neon")}
+								>
+									<img
+										className={styles.header__theme_icon}
+										src={iconNeonTheme}
+										alt="theme"
+									/>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

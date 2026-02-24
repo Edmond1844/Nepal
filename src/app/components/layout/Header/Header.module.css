@@ -1,5 +1,4 @@
 /* Светлая тема*/
-
 .header {
     background-color: var(--light-secondary);
 
@@ -40,11 +39,14 @@
 }
 
 .header__language_button {
-    background-color: var(--transparent);
+    background-color: var(--light-gray);
 
-    border: 1px solid var(--light-text-muted);
-    border-radius: 5px;
-    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+
+    width: 36px;
+    height: 36px;
+    
 }
 
 .header__burger_button {
@@ -55,7 +57,7 @@
     background-color: var(--transparent);
 }
 
-.header__toggle_theme_button {
+.header__theme_button {
     display: none;
 }
 
@@ -92,11 +94,46 @@
         column-gap: 32px;
     }
 
+    .header__language_button {
+        width: 44px;
+        height: 44px;
+    }
+
     .header__burger_button {
         display: none;
     }
 
-    .header__toggle_theme_button {
-        display: block;
+    .header__theme_button_wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+
+        background-color: var(--light-gray);
+        border-radius: 20px;
+
+        padding: 4px;
     }
+
+    .header__theme_button {
+        display: block;
+
+        width: 36px;
+        height: 36px;
+
+        border: none;
+        border-radius: 50%;
+
+        /* background-color: var(--transparent); */
+        background: #fff;
+    }
+}
+
+/* Темная тема*/
+.heder__dark_theme .header {
+    background-color: var(--dark-secondary);
+}
+
+/* неоновая тема */
+.neon_theme .header {
+    background-color: var(--neon-secondary);
 }
