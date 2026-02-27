@@ -2,6 +2,8 @@
 	position: relative;
 	width: 100%;
 	min-height: 600px;
+
+	margin-bottom: 25px;
 }
 
 .hero__picture {
@@ -91,7 +93,10 @@
 
 
 @media (min-width: 1440px) {
-
+	.hero {
+		margin-bottom: 48px;
+	}
+	
 	.hero__title {
 		font: var(--h1-style);
 

@@ -1,6 +1,7 @@
 :root {
     --transparent: rgba(0,0,0,0);
     /* Light Theme */
+    --light-border: #e2e8f0;
     --light-bg: #f8fafb;
     --light-secondary: #ffffff;
     --light-accent: #0891b2;
@@ -59,7 +60,8 @@
 
     /* мобильная версия */
     --h1-style-mobile: var(--fw-bold) 36px var(--font-librefranklin);
-    --h2-style-mobile: var(--fw-bold) 16px var(--font-librefranklin);
+    --h2-style-mobile: var(--fw-bold) 24px var(--font-librefranklin);
+    --h3-style-mobile: var(--fw-bold) 18px var(--font-librefranklin);
 
     --text-style-small: var(--fw-regular) var(--fs-14) var(--font-inter);
 }

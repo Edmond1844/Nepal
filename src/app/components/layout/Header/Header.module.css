@@ -7,13 +7,24 @@
     min-height: 69px;
 }
 
+.header__logo_wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
 .header__wrapper_content { 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__logo {
+.header__logo_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.header__logo_text {
     color: var(--light-text-primary);
     font: var(--h2-style-mobile);
 
@@ -23,7 +34,7 @@
     line-height: 19px;
 }
 
-.header__logo span {
+.header__logo_text span {
     color: var(--light-text-muted);
 
     font-size: 10px;
@@ -82,6 +93,11 @@
     .header {
         margin: 0 auto;
         padding: 32px 50px;
+    }
+
+    .header__logo_icon {
+        width: 26px;
+        height: 26px;
     }
 
     .header__nav {
