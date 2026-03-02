@@ -2,6 +2,9 @@ body {
   background-color: var(--light-bg);
 
   min-width: 360px;
+  max-width: 3000px;
+
+  height: 100%;
 
   margin: 0;
 }

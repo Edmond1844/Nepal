@@ -1,3 +1,8 @@
+.section_fast_pick {
+    padding: 16px;
+    min-height: 500px;
+}
+
 .section_fast_pick__title {
     font: var(--h2-style-mobile);
     
@@ -42,10 +47,29 @@
     text-underline-offset: 4px;
 }
 
+.section_fast_pick__search {
+    margin-bottom: 15px;
+}
+
 .section_fast_pick__search_label {
     display: block;
 }
 
+.section_fast_pick__search_wrapper {
+    position: relative;
+}
+
 .section_fast_pick__search_input {
+    border: 1px solid var(--light-border);
+
     width: 100%;
+}
+
+.section_fast_pick__icon_search {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 10px;
+    left: 15px;
 }

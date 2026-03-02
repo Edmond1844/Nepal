@@ -18,4 +18,4 @@
 ## Папка SectionFastPick
 | Файл | Компонент | Импорты | Описание | Props | Состояния |
 |------|-----------|---------|----------|-------|-----------|
-|**SectionFastPick.jsx**|`SectionFastPick`| | |
+|**SectionFastPick.jsx**|`SectionFastPick`| `Icon` | |
