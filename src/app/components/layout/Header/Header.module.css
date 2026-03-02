@@ -20,26 +20,18 @@
 }
 
 .header__logo_icon {
-    width: 20px;
-    height: 20px;
+    width: 122px;
+    height: 40px;
+        background-image: url('../../../../images/logo/logo-mobile.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.header__logo_text {
+.header__button_language {
+    font-family: var(--font-inter);
+    font-size: var(--text-lg);
+
     color: var(--light-text-primary);
-    font: var(--h2-style-mobile);
-
-    display: flex;
-    flex-direction: column;
-
-    line-height: 19px;
-}
-
-.header__logo_text span {
-    color: var(--light-text-muted);
-
-    font-size: 10px;
-
-    line-height: 10px;
 }
 
 .header__buttons_wrapper {
@@ -47,17 +39,6 @@
     align-items: center;
 
     column-gap: 10px;
-}
-
-.header__language_button {
-    background-color: var(--light-gray);
-
-    border: none;
-    border-radius: 50%;
-
-    width: 36px;
-    height: 36px;
-    
 }
 
 .header__burger_button {
@@ -68,8 +49,18 @@
     background-color: var(--transparent);
 }
 
-.header__theme_button {
-    display: none;
+.header__button {
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--light-gray);
+}
+
+.header__theme_button svg {
+    color: var(--light-text-primary);
 }
 
 .header__content {
@@ -96,8 +87,12 @@
     }
 
     .header__logo_icon {
-        width: 26px;
-        height: 26px;
+        width: 234px;
+        height: 42px;
+        background-image: url('../../../../images/logo/logo-desktop.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
     }
 
     .header__nav {
@@ -110,39 +105,11 @@
         column-gap: 32px;
     }
 
-    .header__language_button {
-        width: 44px;
-        height: 44px;
-    }
-
     .header__burger_button {
         display: none;
     }
-
-    .header__theme_button_wrapper {
-        display: flex;
-        align-items: center;
-        column-gap: 4px;
-
-        background-color: var(--light-gray);
-        border-radius: 20px;
-
-        padding: 4px;
-    }
-
-    .header__theme_button {
-        display: block;
-
-        width: 36px;
-        height: 36px;
-
-        border: none;
-        border-radius: 50%;
-
-        /* background-color: var(--transparent); */
-        background: #fff;
-    }
 }
+
 
 /* Темная тема*/
 .heder__dark_theme .header {

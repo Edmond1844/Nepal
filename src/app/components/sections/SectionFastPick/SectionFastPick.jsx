@@ -1,6 +1,6 @@
 import styles from "./SectionFastPick.module.css";
 
-import iconFilter from "../../../../images/svg/icon-filter.svg";
+// import iconFilter from "../../../../images/svg/icon-filter.svg";
 
 export default function SectionFastPick({ lang, language }) {
 	return (
@@ -13,7 +13,7 @@ export default function SectionFastPick({ lang, language }) {
 					<div className={styles.section_fast_pick__filter_header}>
 						{/* Установить библиотеку  Tailwind  */}
 						<div className="flex items-center gap-2">
-							<img src={iconFilter} aria-hidden="true" />
+							{/* <img src={iconFilter} aria-hidden="true" /> */}
 							<h3
 								className={
 									styles.section_fast_pick__filter_title
@@ -22,14 +22,7 @@ export default function SectionFastPick({ lang, language }) {
 								{language[lang].fastPickFilterTitle}
 							</h3>
 						</div>
-						<div
-							className="flex items-center gap-2"
-							// style={{ border: "2px solid red" }}
-						>
-							<div className="w-8 h-8 bg-blue-500">1</div>
-							<div className="w-8 h-8 bg-green-500">2</div>
-							<div className="w-8 h-8 bg-red-500">3</div>
-						</div>
+
 						<button
 							className={styles.section_fast_pick__filter_button}
 						>

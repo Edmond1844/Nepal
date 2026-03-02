@@ -1,0 +1,13 @@
+<svg>
+    <symbol viewBox="0 0 20 20" id='icon-toggle-theme' fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.0002 14.1667C12.3013 14.1667 14.1668 12.3012 14.1668 9.99999C14.1668 7.69881 12.3013 5.83333 10.0002 5.83333C7.69898 5.83333 5.8335 7.69881 5.8335 9.99999C5.8335 12.3012 7.69898 14.1667 10.0002 14.1667Z" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M10 0.833328V2.49999" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M10 17.5V19.1667" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M3.5166 3.51666L4.69993 4.7" stroke="currentColor" stroke-width="1.66667"/>
+    </symbol>
+    <symbol viewBox="0 0 18 21" id='icon-burger' fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21" stroke="currentColor" stroke-width="2"/>
+        <path d="M3 6H21" stroke="currentColor" stroke-width="2"/>
+        <path d="M3 18H21" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+</svg>

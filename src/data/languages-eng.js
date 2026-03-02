@@ -3,7 +3,6 @@ export const languageEng = {
 		language: "EN",
 
         //  Header
-        headerLogo: 'Journey to the heights',
         navLinks: [
             { to: "/tours", text: "Tours" },
             { to: "/guides", text: "Guides" },
