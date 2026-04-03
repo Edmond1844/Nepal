@@ -1,0 +1,161 @@
+export const languageRus = {
+	ru: {
+		language: "RU",
+
+        BottonMoreDetails: 'Подробнее',
+
+        //  Header
+        headerLogo: 'Путешествие к вершинам',
+        navLinks: [
+            { to: "/tours", text: "Туры" },
+            { to: "/guides", text: "Гиды" },
+            { to: "/about-us", text: "О нас" },
+        ],
+        
+        // Hero
+        title: 'Горный непал',
+        subtitlePrimary: 'Путешествие к вершинам',
+        subtitleSecondary: 'Туры для всех: от чая на высоте до Эвереста',
+
+        buttonText: 'Выбрать тур',
+
+        // Section fast pick
+        fastPickTitle: 'Быстрый выбор',
+        fastPickFilterTitle: 'Фильтр',
+        fastPickFilterButtonRest: 'Сбросить',
+        fastPickSearch: 'Поиск',
+        fastPickLevel: 'Уровень',   
+        fastPickDuration: 'Длительность',
+
+        fastPickPriceInput: 'Макс. цена',
+        fastPickSortingInput: 'Сортировка',
+
+        fastPickButtonMoreTours: 'Туров показано',
+        fastPickOf: 'из', 
+
+        
+        
+        // Filter buttons
+        buttonsFilterToursLevel: [
+            {
+                id: 1, 
+                name: 'Новичок',
+                value: 'beginner'
+            },
+            {
+                id: 2,
+                name: 'Средний',
+                value: 'Average'
+            },
+            {
+                id: 3,
+                name: 'Профи',
+                value: 'Pro'
+            },
+            {
+                id: 4,
+                name: 'Crazy',
+                value: 'Crazy'
+            },
+        ],
+
+        buttonsFilterToursDuration: [
+            {
+                id: 1,
+                name: '1 день',
+            },
+            {
+                id: 2,
+                name: '2-4 дня',
+            },
+            {
+                id: 3,
+                name: '5-8 дней',
+            },
+            {
+                id: 4,
+                name: '9+ дней',
+            },
+        ],
+    
+        // Tours 
+        tours: [
+            {
+                id: 'Tea-break',
+                img: './src/images/tours/Tea-break.png',
+                title: 'Чай-брейк на высоте',
+                description: 'Комфортная прогулка с видами на Гималаи, обед инастоящий непальский чай.',
+                price: 3500,
+                level: 'beginner',
+                levelDisplay: 'Новичок',
+                daysDisplay: '1 день',
+                toursId: [1],
+            },
+            {
+                id: 'Annapurna',
+                img: './src/images/tours/View.png',
+                title: 'Трек вокруг Аннапурны',
+                description: 'Облегченная версия классики — 7 дней вместо 14, те же виды и без экстрима.',
+                price: 28000,
+                level: 'Average',   
+                levelDisplay: 'Средний',
+                daysDisplay: '7 дней',
+                toursId: [2],
+            },
+            {
+                id: 'Everest',
+                img: './src/images/tours/Everest.png',
+                title: 'Базовый лагерь Эвереста',
+                description: 'Путешествие к подножию высочайшей вершины мира. Это не просто трекинг — это вызов.',
+                price: 65000,
+                level: 'Pro',   
+                levelDisplay: 'Профи',
+                daysDisplay: '12 дней',
+                toursId: [3],
+            },
+            {
+                id: 'Langtang',
+                img: './src/images/tours/View.png',
+                title: 'Долина Лангтанг',
+                description: 'Первый высотный трек для новичков. Леса, яки, тишина и панорамы на 7000м пики.',
+                price: 18000,
+                level: 'beginner',
+                levelDisplay: 'Новичок',
+                daysDisplay: '1 день',
+                toursId: [1],
+            }
+        ],
+
+        // Section guides
+        titleGuides: 'Наши гиды',
+        buttonGides: 'Профиль',
+
+        // Guides
+        guides: [
+            {
+                id: 1,
+                name: 'Тензинг Норгей',
+                motto: 'Медленно — это быстро',
+                levelDisplay: ['Новичок', 'Средний', 'Профи'],
+                level: ['beginner', 'Average', 'Pro'],
+                toursId: [1,2,3]
+            },
+            {
+                id: 2,
+                name: 'Лхакпа Шерпа',
+                motto: 'Вершины не ждут',
+                levelDisplay: ['Профи', 'Средний',],
+                level: ['Pro', 'Average'],
+                toursId: [3,4]
+            },
+            {
+                id: 3,
+                name: 'Анура Таманг',
+                motto: 'Горы — это люди',
+                levelDisplay: ['Новичок', 'Средний'],
+                level: ['beginner', 'Average'],
+                toursId: [1,2]
+            },
+        ]
+	},
+}
