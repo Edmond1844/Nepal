@@ -3,7 +3,8 @@ export const languageRus = {
 		language: "RU",
 
         BottonMoreDetails: 'Подробнее',
-
+        notFound: 'Ничего не найдено',
+        
         //  Header
         headerLogo: 'Путешествие к вершинам',
         navLinks: [
@@ -33,8 +34,11 @@ export const languageRus = {
         fastPickButtonMoreTours: 'Туров показано',
         fastPickOf: 'из', 
 
-        
-        
+        fastPickPriceTour: 'Цены туров от',
+        fastPickPpriceTourTo: 'до', 
+
+        fastPickButtonMoreTours: 'Показать ещё туры',
+
         // Filter buttons
         buttonsFilterToursLevel: [
             {
@@ -134,6 +138,7 @@ export const languageRus = {
         guides: [
             {
                 id: 1,
+                img: 'src/images/guides/Tenzing.avif',
                 name: 'Тензинг Норгей',
                 motto: 'Медленно — это быстро',
                 levelDisplay: ['Новичок', 'Средний', 'Профи'],
@@ -142,6 +147,7 @@ export const languageRus = {
             },
             {
                 id: 2,
+                img: 'src/images/guides/Lhakpa.jpg',
                 name: 'Лхакпа Шерпа',
                 motto: 'Вершины не ждут',
                 levelDisplay: ['Профи', 'Средний',],
@@ -150,6 +156,7 @@ export const languageRus = {
             },
             {
                 id: 3,
+                img: 'src/images/guides/Anura.jpg',
                 name: 'Анура Таманг',
                 motto: 'Горы — это люди',
                 levelDisplay: ['Новичок', 'Средний'],

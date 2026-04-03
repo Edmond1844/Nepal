@@ -20,6 +20,16 @@
     margin-bottom: 16px;
 }
 
+.section_guides__img {
+    width: 80px;
+    height: 80px;
+
+    border: 3px solid var(--border-color-guides);
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
 .section_guides__name {
     font: var(--h3-style-mobile);
 

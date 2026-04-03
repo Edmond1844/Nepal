@@ -26,7 +26,7 @@
     margin-bottom: 16px;
 }
 
-.section_fast_pick__more_tours_title {
+.section_fast_pick__info_text {
     margin-bottom: 15px;
 
     font: var(--h3-style-mobile);
@@ -235,7 +235,7 @@
     color: var(--color-price);
 
     text-shadow: var(--text-shadow);
-    }
+}  
 
 .section_fast_pick__card_button {
     padding: 8px 16px;
@@ -244,6 +244,16 @@
     color: var(--btn-text);
     box-shadow: var(--box-shadow)
 }
+
+
+.section_fast_pick__button_more_details {
+    padding: 8px 16px;
+    width: 100%;
+
+    background-color: var(--btn);
+    color: var(--btn-text);
+    box-shadow: var(--box-shadow)
+}  
 
 @media (max-width: 423px) {
     .section_fast_pick__filter_button_duration {

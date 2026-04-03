@@ -19,6 +19,8 @@ export default function SectionFastPick({ lang, language }) {
     setTour((prevTour) => prevTour + 2);
   }
 
+  const sorted = [...visibleTours].sort((a, b) => a.price - b.price);
+
   return (
     <>
       <section className={`${styles.section_fast_pick} `}>
@@ -125,16 +127,20 @@ export default function SectionFastPick({ lang, language }) {
             </div>
           </div>
         </div>
-        <h3 className={styles.section_fast_pick__more_tours_title}>
+        <h3 className={styles.section_fast_pick__info_text}>
           {language[lang].fastPickButtonMoreTours} {visibleTours.length}{" "}
           {language[lang].fastPickOf} {tours.length}
         </h3>
         <ul>
+          <p className={styles.section_fast_pick__info_text}>
+            {language[lang].fastPickPriceTour} {sorted[0].price}{" "}
+            {language[lang].fastPickPpriceTourTo}{" "}
+            {sorted[sorted.length - 1].price}
+          </p>
+
           {visibleTours.length === 0 ? (
-            <h3 className={styles.section_fast_pick__more_tours_title}>
-              {/* {language[lang].fastPickButtonMoreTours} {visibleTours.length}{" "}
-          {language[lang].fastPickOf} {tours.length} */}
-              Ничего не найдено
+            <h3 className={styles.section_fast_pick__info_text}>
+              {language[lang].notFound}
             </h3>
           ) : (
             visibleTours.map((item) => {
@@ -178,7 +184,14 @@ export default function SectionFastPick({ lang, language }) {
               );
             })
           )}
-          {hasMoreTours && <MainButton onClick={handleClick}> rrr </MainButton>}
+          {hasMoreTours && (
+            <MainButton
+              className={styles.section_fast_pick__button_more_details}
+              onClick={handleClick}
+            >
+              {language[lang].fastPickButtonMoreTours}
+            </MainButton>
+          )}
         </ul>
       </section>
     </>

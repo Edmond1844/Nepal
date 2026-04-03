@@ -2,6 +2,9 @@ export const languageEng = {
 	en: {
 		language: "EN",
 
+        BottonMoreDetails: 'More details',
+        notFound: 'Not found',
+
         //  Header
         navLinks: [
             { to: "/tours", text: "Tours" },
@@ -25,10 +28,15 @@ export const languageEng = {
         fastPickDuration: 'Duration',
 
         fastPickPriceInput: 'Max. price',
-        fastPickSortingInput: 'Sorting',
+        fastPickSortingInput: 'Sorting',    
         
-        BottonMoreDetails: 'More details',
-        
+        fastPickButtonMoreTours: 'Turov shown',
+        fastPickOf: 'of', 
+
+        fastPickPriceTour: 'Tour prices from',
+        fastPickPpriceTourTo: 'to', 
+
+        fastPickButtonMoreTours: 'Show more tours',
         // Filter botton 
         buttonsFilterToursLevel: [
             {
@@ -115,6 +123,41 @@ export const languageEng = {
                 toursId: [1],
             }
         ],
+
+        // Section guides
+        titleGuides: 'Our guides',
+        buttonGides: 'Profile',
+
+         // Guides
+        guides: [
+            {
+                id: 1,
+                img: 'src/images/guides/Tenzing.avif',
+                name: 'Тензинг Норгей',
+                motto: 'Медленно — это быстро',
+                levelDisplay: ['Новичок', 'Средний', 'Профи'],
+                level: ['beginner', 'Average', 'Pro'],
+                toursId: [1,2,3]
+            },
+            {
+                id: 2,
+                img: 'src/images/guides/Lhakpa.jpg',
+                name: 'Лхакпа Шерпа',
+                motto: 'Вершины не ждут',
+                levelDisplay: ['Профи', 'Средний',],
+                level: ['Pro', 'Average'],
+                toursId: [3,4]
+            },
+            {
+                id: 3,
+                img: 'src/images/guides/Anura.jpg',
+                name: 'Анура Таманг',
+                motto: 'Горы — это люди',
+                levelDisplay: ['Новичок', 'Средний'],
+                level: ['beginner', 'Average'],
+                toursId: [1,2]
+            },
+        ]
 	},
 
 }

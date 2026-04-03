@@ -109,6 +109,9 @@
 
     --level-color-text: var(--light-secondary);
     --level-pro-crazy-text: var(--light-secondary);
+
+    /* Border guides */
+    --border-color-guides: var(--light-accent);
 }
 
 .theme-dark {
@@ -124,7 +127,6 @@
     --box-shadow: none;
     --text-shadow: none;
     
-
     /* header */
     --header-btn-bg: var(--light-gray);
     --header-btn: var(--light-text-primary);
@@ -149,6 +151,9 @@
     
     --level-color-text: var(--light-secondary);
     --level-pro-crazy-text: var(--light-secondary);
+
+    /* Border guides */
+    --border-color-guides: var(--light-accent);
 }
 
 .theme-neon {
@@ -193,4 +198,7 @@
     --level-shadow-average: #ffff00;
     --level-shadow-pro: #ff0080;
     --level-shadow-expert: #b388ff;
+
+    /* Border guides */
+    --border-color-guides: var(--neon-cyan);
 }

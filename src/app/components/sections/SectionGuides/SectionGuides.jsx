@@ -12,6 +12,11 @@ export default function SectionGuides({ lang, language }) {
       <ul>
         {guides.map((guide) => (
           <li className={styles.section_guides__card} key={guide.id}>
+            <img
+              className={styles.section_guides__img}
+              src={guide.img}
+              alt="Гид"
+            />
             <h4 className={styles.section_guides__name}>{guide.name}</h4>
             <span>{guide.motto}</span>
             <div className="flex">
