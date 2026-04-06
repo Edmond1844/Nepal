@@ -11,6 +11,13 @@
 }
 
 .section_guides__card {
+    min-height: 186px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 16px;
+
     border: 1px solid var(--border-color);
     border-radius: 16px;
 
@@ -19,8 +26,10 @@
     padding: 16px;
     margin-bottom: 16px;
 }
-
 .section_guides__img {
+    grid-row: span 2;
+    grid-column: 1;
+
     width: 80px;
     height: 80px;
 
@@ -28,14 +37,35 @@
     border-radius: 50%;
 
     object-fit: cover;
+    object-position: center;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.section_guides__card_content {
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
 
 .section_guides__name {
     font: var(--h3-style-mobile);
 
-    margin-bottom: 8px;
-
     color: var(--color-title);
+
+    margin-bottom: 2px;
+}
+
+.section_guides__motto {
+    font-style: var(--fs-italic);
+    font-family: var(--font-inter);
+    font-size: var(--text-xs);
+
+    line-height: 19px;
+
+    color: var(--color-motto);
+
+    margin-bottom: 2px;
 }
 
 .section_fast_pick__card_level {
@@ -49,6 +79,31 @@
     padding: 4px 10px;
     
     border-radius: 16px;
+}
+
+.section_guides__experience {
+    font-family: var(--font-inter);
+    font-size: var(--text-xs);
+    font-weight: var(--fw-regular);
+
+    line-height: 19px;
+
+    color: var(--color-text);
+
+    margin-bottom: 16px;
+}
+
+.section_guides__button {
+    grid-column: span 2;
+    grid-row: 3;
+    
+    background-color: var(--btn);
+    color: var(--btn-text);
+
+    box-shadow: var(--box-shadow);
+
+    width: 100%;
+    min-height: 37px;
 }
 
 .section_fast_pick__card_level[data-level="beginner"] {

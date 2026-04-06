@@ -17,10 +17,10 @@ export default function SectionGuides({ lang, language }) {
               src={guide.img}
               alt="Гид"
             />
-            <h4 className={styles.section_guides__name}>{guide.name}</h4>
-            <span>{guide.motto}</span>
-            <div className="flex">
-              <div className="flex">
+            <div className={styles.section_guides__card_content}>
+              <h4 className={styles.section_guides__name}>{guide.name}</h4>
+              <p className={styles.section_guides__motto}>"{guide.motto}"</p>
+              <div className="flex gap-2 mb-2">
                 {guide.levelDisplay.map((level, index) => (
                   <span
                     key={index}
@@ -36,8 +36,14 @@ export default function SectionGuides({ lang, language }) {
                   </span>
                 ))}
               </div>
+              <p className={styles.section_guides__experience}>
+                {guide.experience}
+              </p>
             </div>
-            <MainButton variant="myBookings">
+            <MainButton
+              className={styles.section_guides__button}
+              variant="myBookings"
+            >
               {language[lang].buttonGides}
             </MainButton>
           </li>

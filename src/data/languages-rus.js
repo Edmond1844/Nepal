@@ -141,6 +141,7 @@ export const languageRus = {
                 img: 'src/images/guides/Tenzing.avif',
                 name: 'Тензинг Норгей',
                 motto: 'Медленно — это быстро',
+                experience: '18 лет опыта • 250+ восхождений',
                 levelDisplay: ['Новичок', 'Средний', 'Профи'],
                 level: ['beginner', 'Average', 'Pro'],
                 toursId: [1,2,3]
@@ -150,6 +151,7 @@ export const languageRus = {
                 img: 'src/images/guides/Lhakpa.jpg',
                 name: 'Лхакпа Шерпа',
                 motto: 'Вершины не ждут',
+                experience: '12 лет опыта • Экстремал',
                 levelDisplay: ['Профи', 'Средний',],
                 level: ['Pro', 'Average'],
                 toursId: [3,4]
@@ -159,6 +161,7 @@ export const languageRus = {
                 img: 'src/images/guides/Anura.jpg',
                 name: 'Анура Таманг',
                 motto: 'Горы — это люди',
+                experience: '8 лет опыта • Культурный гид',
                 levelDisplay: ['Новичок', 'Средний'],
                 level: ['beginner', 'Average'],
                 toursId: [1,2]

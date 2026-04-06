@@ -133,9 +133,9 @@ export default function SectionFastPick({ lang, language }) {
         </h3>
         <ul>
           <p className={styles.section_fast_pick__info_text}>
-            {language[lang].fastPickPriceTour} {sorted[0].price}{" "}
-            {language[lang].fastPickPpriceTourTo}{" "}
-            {sorted[sorted.length - 1].price}
+            {`${language[lang].fastPickPriceTour} ${sorted[0].price.toLocaleString("ru-RU")} ₽${" "}
+            ${language[lang].fastPickPpriceTourTo}
+            ${sorted[sorted.length - 1].price.toLocaleString("ru-RU")} ₽`}
           </p>
 
           {visibleTours.length === 0 ? (
