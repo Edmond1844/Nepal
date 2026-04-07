@@ -17,6 +17,8 @@
 }
 
 .section_fast_pick__filter_wrapper {
+    background-color: var(--bacground-color-surface);
+
     border: 1px solid var(--border-color);
     border-radius: 16px;
 
@@ -145,6 +147,8 @@
 .section_fast_pick__card {
     border: 1px solid var(--border-color);
     border-radius: 16px;
+
+    background-color: var(--bacground-color-surface);
     
     overflow: hidden;
 

@@ -23,7 +23,7 @@ export default function SectionFastPick({ lang, language }) {
 
   return (
     <>
-      <section className={`${styles.section_fast_pick} `}>
+      <section className={`${styles.section_fast_pick} container`}>
         <h2 className={styles.section_fast_pick__title}>
           {language[lang].fastPickTitle}
         </h2>

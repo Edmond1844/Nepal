@@ -35,6 +35,7 @@
     --neon-secondary: #161b2e;
     --neon-accent: rgba(0, 217, 255, 0.4); 
     --neon-cyan: #00d9ff;
+    --neon-mist: #93A5C5;
 
     /* Шрифты */
     --font-inter: 'Inter', sans-serif;
@@ -80,6 +81,8 @@
 
     --border-btn: var(--light-gray);
 
+    --bacground-color-surface: var(--light-secondary);
+
     /* shadow */
     --border-shadow-color: rgba(0, 0, 0, 0.25);
     --box-shadow: none;
@@ -114,6 +117,9 @@
 
     /* Border guides */
     --border-color-guides: var(--light-accent);
+
+    /* footer */
+    --footer-text-color: var(--light-text-muted);
 }
 
 .theme-dark {
@@ -123,6 +129,8 @@
     --border-color: var(--dark-border);
 
     --border-btn: var(--primary-dark);
+
+    --bacground-color-surface: var(--neon-secondary);
 
     /* shadow */
     --border-shadow-color: rgba(143, 158, 209, 0.25);
@@ -158,6 +166,9 @@
 
     /* Border guides */
     --border-color-guides: var(--light-accent);
+
+    /* footer */
+    --footer-text-color: var(--light-text-muted);
 }
 
 .theme-neon {
@@ -167,6 +178,8 @@
     --border-color: var(--neon-cyan);
 
     --border-btn: var(--neon-cyan);
+
+    --bacground-color-surface: var(--neon-secondary);
 
     /* shadow */
     --border-shadow-color: rgba(0, 217, 255, 0.3);
@@ -207,4 +220,7 @@
 
     /* Border guides */
     --border-color-guides: var(--neon-cyan);
+
+    /* footer */
+    --footer-text-color: var(--neon-mist);
 }

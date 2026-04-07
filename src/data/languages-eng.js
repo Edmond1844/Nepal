@@ -37,6 +37,10 @@ export const languageEng = {
         fastPickPpriceTourTo: 'to', 
 
         fastPickButtonMoreTours: 'Show more tours',
+
+         // Section Advantages
+        SectionAdvantagesTitle: 'Why choose us',
+        
         // Filter botton 
         buttonsFilterToursLevel: [
             {
@@ -160,7 +164,40 @@ export const languageEng = {
                 level: ['beginner', 'Average'],
                 toursId: [1,2]
             },
-        ]
+        ],
+
+        // Section Advantages
+        SectionAdvantagesTitle: 'Why choose us',
+
+        advantages: [
+            {
+                id: 'advantages-1',
+                icon: 'icon-safery',
+                title: 'Safety',
+                description: 'Experienced guidance, medical supervision and the "slow is fast" rule.',
+            },
+            {
+                id: 'advantages-2',
+                icon: 'icon-height',
+                title: 'Height',
+                description: 'From a comfortable 2000m to an extreme 5500m. We\'ll find your level.',
+            },
+            {
+                id: 'advantages-3',
+                icon: 'icon-with-heart',
+                title: 'With humor',
+                description: 'Mountains are serious things, but we can joke even on the pass.',
+            },
+            {
+                id: 'advantages-4',
+                icon: 'icon-tea',
+                title: 'Masala tea',
+                description: 'The best in the Himalayas. We brew it at every stop. That\'s important.',
+            }
+        ],
+
+        // Footer
+        footer: '© 2026 Nepal Peak Station Journey to the Peaks',
 	},
 
 }

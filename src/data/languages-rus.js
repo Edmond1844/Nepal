@@ -166,6 +166,40 @@ export const languageRus = {
                 level: ['beginner', 'Average'],
                 toursId: [1,2]
             },
-        ]
+        ],
+
+        // Section Advantages
+        SectionAdvantagesTitle: 'Почему с нами',
+
+        advantages: [
+            {
+                id: 'advantages-1',
+                icon: 'icon-safery',
+                title: 'Безопасность',
+                description: 'Опытные гиды, медицинский контроль и правило "медленно — это быстро".',
+            },
+            {
+                id: 'advantages-2',
+                icon: 'icon-height',
+                title: 'Высота',
+                description: 'От комфортных 2000м до экстремальных 5500м. Найдем ваш уровень.',
+            },
+            {
+                id: 'advantages-3',
+                icon: 'icon-with-heart',
+                title: 'С юмором',
+                description: 'Горы — это серьезно, но мы умеем шутить даже на перевале.',
+            },
+            {
+                id: 'advantages-4',
+                icon: 'icon-tea',
+                title: 'Чай масала',
+                description: 'Лучший в Гималаях. Варим на каждой остановке. Это важно.',
+            }
+        ],
+
+        // Footer
+        footer: '© 2026 Nepal Peak Station Путешествие к вершинам',
 	},
+
 }

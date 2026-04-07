@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+
+    background-color: var(--bacground-color-surface);
+
+    padding: 31px 0 32px 0;
+}
+
+.footer__text {
+    line-height: 19px;
+
+    font-family: var(--font-inter);
+    font-size: var(--text-xs);
+    font-weight: var(--fw-regular);
+
+    color: var(--footer-text-color);
+}

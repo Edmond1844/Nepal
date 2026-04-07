@@ -5,7 +5,7 @@ import MainButton from "../../ui/MainButton/MainButton";
 export default function SectionGuides({ lang, language }) {
   const guides = language[lang].guides;
   return (
-    <section className={styles.section_guides}>
+    <section className={`${styles.section_guides} container`}>
       <h2 className={styles.section_guides__title}>
         {language[lang].titleGuides}
       </h2>
