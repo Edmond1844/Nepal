@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg">
+    <!-- Иконка логотипа -->
+    <svg viewBox="0 0 34 35" id="icon-mountain" fill="none">
+        <path d="M14 8.25L19 18.25L25.25 12L31.5 30.75H6.5L14 8.25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
     <!-- Иконка переключения темы -->
     <symbol viewBox="0 0 20 20" id="icon-toggle-theme" fill="none">
         <path d="M10.0002 14.1667C12.3013 14.1667 14.1668 12.3012 14.1668 9.99999C14.1668 7.69881 12.3013 5.83333 10.0002 5.83333C7.69898 5.83333 5.8335 7.69881 5.8335 9.99999C5.8335 12.3012 7.69898 14.1667 10.0002 14.1667Z" stroke="currentColor" stroke-width="1.66667"/>

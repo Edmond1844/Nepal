@@ -222,5 +222,5 @@
     --border-color-guides: var(--neon-cyan);
 
     /* footer */
-    --footer-text-color: var(--neon-mist);
+        --footer-text-color: var(--neon-mist);
 }

@@ -5,7 +5,7 @@
 
     border-top: 1px solid var(--border-color);
 
-    box-shadow: 0px -4px 20px rgba(0, 217, 255, 0.3);  
+    box-shadow: 0px -4px 20px  var(--border-shadow-color); 
     opacity: 30%;
 
     background-color: var(--bacground-color-surface);
