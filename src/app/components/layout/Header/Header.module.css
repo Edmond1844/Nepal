@@ -80,6 +80,8 @@
 .header_mobile_menu {
     border-top: 1px solid var(--border-color);
 
+    box-shadow: 0px 15px 20px  var(--border-shadow-color);
+
     position: fixed;
     top: 67px;
     right: 0;

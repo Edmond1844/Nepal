@@ -65,7 +65,7 @@ export default function Header({
                 className={`${styles.header__button} ${styles.header__button_burger} flex items-center justify-center`}
                 onClick={toggleMenu}
               >
-                <Icon name="icon-burger" />
+                <Icon name={isMenuOpen ? "icon-burger-close" : "icon-burger"} />
               </button>
               {isMenuOpen && (
                 <nav

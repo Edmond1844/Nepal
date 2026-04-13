@@ -10,11 +10,25 @@ export default function SectionFastPick({ lang, language }) {
   const buttonsDuration = language[lang].buttonsFilterToursDuration;
   const tours = language[lang].tours;
 
+  // Филтрация туров
+  const [filerTours, setFilerTours] = useState(tours);
+  const [value, setValue] = useState("");
+
+  function handleInput(event) {
+    setValue(event.target.value);
+  }
+
   const [tour, setTour] = useState(2);
   const visibleTours = tours.slice(0, tour);
 
   const hasMoreTours = tour < tours.length;
 
+  const filteredTours = filerTours.filter(
+    (item) =>
+      item.title.toLowerCase().includes(value.toLowerCase()) ||
+      item.price.toString().includes(value) ||
+      item.levelDisplay.toLowerCase().includes(value.toLowerCase()),
+  );
   function handleClick() {
     setTour((prevTour) => prevTour + 2);
   }
@@ -49,7 +63,9 @@ export default function SectionFastPick({ lang, language }) {
             <div
               className={`${styles.section_fast_pick__search_wrapper} ${styles.section_fast_pick__wrapper}`}
             >
+              {/* Для фильтрации */}
               <input
+                onChange={handleInput}
                 type="text"
                 id="search-input"
                 className={styles.section_fast_pick__search_input}
@@ -138,12 +154,12 @@ export default function SectionFastPick({ lang, language }) {
             ${sorted[sorted.length - 1].price.toLocaleString("ru-RU")} ₽`}
           </p>
 
-          {visibleTours.length === 0 ? (
+          {filteredTours.length === 0 ? (
             <h3 className={styles.section_fast_pick__info_text}>
               {language[lang].notFound}
             </h3>
           ) : (
-            visibleTours.map((item) => {
+            filteredTours.map((item) => {
               return (
                 <li className={styles.section_fast_pick__card} key={item.id}>
                   <img
