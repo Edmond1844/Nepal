@@ -74,7 +74,10 @@ export default function Header({
                 >
                   <ul className={styles.header__mobile_menu_list}>
                     {navLinks.map((link) => (
-                      <li key={link.to}>
+                      <li
+                        className={styles.header__mobile_menu_item}
+                        key={link.to}
+                      >
                         <NavLink to={link.to}>{link.text}</NavLink>
                       </li>
                     ))}
