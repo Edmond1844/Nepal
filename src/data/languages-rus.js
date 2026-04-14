@@ -44,22 +44,22 @@ export const languageRus = {
             {
                 id: 1, 
                 name: 'Новичок',
-                value: 'beginner'
+                filterType: 'beginner',
             },
             {
                 id: 2,
                 name: 'Средний',
-                value: 'Average'
+                filterType: 'Average',
             },
             {
                 id: 3,
                 name: 'Профи',
-                value: 'Pro'
+                filterType: 'Pro',
             },
             {
                 id: 4,
                 name: 'Crazy',
-                value: 'Crazy'
+                filterType: 'Crazy',
             },
         ],
 
@@ -67,18 +67,22 @@ export const languageRus = {
             {
                 id: 1,
                 name: '1 день',
+                filterType: '1days',
             },
             {
                 id: 2,
                 name: '2-4 дня',
+                filterType: '2-4days',
             },
             {
                 id: 3,
                 name: '5-8 дней',
+                filterType: '5-8days',
             },
             {
                 id: 4,
                 name: '9+ дней',
+                filterType: '9+days',
             },
         ],
     
@@ -92,7 +96,8 @@ export const languageRus = {
                 price: 3500,
                 level: 'beginner',
                 levelDisplay: 'Новичок',
-                daysDisplay: '1 день',
+                daysDisplay: '2 день',
+                daysNumber: 2, 
                 toursId: [1],
             },
             {
@@ -104,6 +109,7 @@ export const languageRus = {
                 level: 'Average',   
                 levelDisplay: 'Средний',
                 daysDisplay: '7 дней',
+                daysNumber: 7, 
                 toursId: [2],
             },
             {
@@ -115,6 +121,7 @@ export const languageRus = {
                 level: 'Pro',   
                 levelDisplay: 'Профи',
                 daysDisplay: '12 дней',
+                daysNumber: 12,
                 toursId: [3],
             },
             {
@@ -126,6 +133,7 @@ export const languageRus = {
                 level: 'beginner',
                 levelDisplay: 'Новичок',
                 daysDisplay: '1 день',
+                daysNumber: 1,
                 toursId: [1],
             }
         ],

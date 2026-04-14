@@ -12,3 +12,9 @@
     font-family: var(--font-inter);
     font-weight: var(--fw-semibold);
 }
+
+.main_button.main_button_filtered_active {
+    background-color: var(--btn);
+    color: var(--btn-text);
+}
+

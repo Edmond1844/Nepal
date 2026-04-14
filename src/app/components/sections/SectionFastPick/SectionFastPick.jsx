@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./SectionFastPick.module.css";
 
 import Icon from "../../ui/Icon/Icon.jsx";
-import FilterButton from "../../ui/FilterBottons/FilterButtons.jsx";
 import MainButton from "../../ui/MainButton/MainButton.jsx";
 
 export default function SectionFastPick({ lang, language }) {
@@ -13,15 +12,51 @@ export default function SectionFastPick({ lang, language }) {
   // Филтрация туров
   const [filerTours, setFilerTours] = useState(tours);
   const [value, setValue] = useState("");
+  const [tour, setTour] = useState(2);
+  const [activeButton, setActiveButton] = useState("");
+
+  useEffect(() => {
+    setFilerTours(tours);
+    setValue("");
+    setTour(2);
+  }, [lang, tours]);
 
   function handleInput(event) {
-    setValue(event.target.value);
+    setValue(event.target.value.trim());
   }
 
-  const [tour, setTour] = useState(2);
-  const visibleTours = tours.slice(0, tour);
+  //  Для кнопок
+  function filterLevel(filterType) {
+    setActiveButton(filterType);
 
-  const hasMoreTours = tour < tours.length;
+    if (filterType === "beginner") {
+      setFilerTours(tours.filter((item) => item.level === "beginner"));
+    } else if (filterType === "Average") {
+      setFilerTours(tours.filter((item) => item.level === "Average"));
+    } else if (filterType === "Pro") {
+      setFilerTours(tours.filter((item) => item.level === "Pro"));
+    } else if (filterType === "Crazy") {
+      setFilerTours(tours.filter((item) => item.level === "Crazy"));
+    }
+  }
+
+  function filterDays(filterType) {
+    setActiveButton(filterType);
+
+    if (filterType === "1days") {
+      setFilerTours(tours.filter((item) => item.daysNumber === 1));
+    } else if (filterType === "2-4days") {
+      setFilerTours(
+        tours.filter((item) => item.daysNumber >= 2 && item.daysNumber <= 4),
+      );
+    } else if (filterType === "5-8days") {
+      setFilerTours(
+        tours.filter((item) => item.daysNumber >= 5 && item.daysNumber <= 8),
+      );
+    } else if (filterType === "9+days") {
+      setFilerTours(tours.filter((item) => item.daysNumber >= 9));
+    }
+  }
 
   const filteredTours = filerTours.filter(
     (item) =>
@@ -29,9 +64,14 @@ export default function SectionFastPick({ lang, language }) {
       item.price.toString().includes(value) ||
       item.levelDisplay.toLowerCase().includes(value.toLowerCase()),
   );
+
+  const visibleTours = filteredTours.slice(0, tour);
+
   function handleClick() {
     setTour((prevTour) => prevTour + 2);
   }
+
+  const hasMoreTours = tour < filteredTours.length;
 
   const sorted = [...visibleTours].sort((a, b) => a.price - b.price);
 
@@ -63,7 +103,6 @@ export default function SectionFastPick({ lang, language }) {
             <div
               className={`${styles.section_fast_pick__search_wrapper} ${styles.section_fast_pick__wrapper}`}
             >
-              {/* Для фильтрации */}
               <input
                 onChange={handleInput}
                 type="text"
@@ -79,15 +118,18 @@ export default function SectionFastPick({ lang, language }) {
               <p className={styles.section_fast_pick__filter_names}>
                 {language[lang].fastPickLevel}
               </p>
-              <div className="flex items-center gap-2 flex-wrap">
+              <div className="flex items-center gap-3 flex-wrap">
                 {buttonsLevel.map((item) => (
-                  <FilterButton
+                  <MainButton
                     className={`${
                       styles.section_fast_pick__filter_button
                     } ${styles.section_fast_pick__filter_button_level}`}
+                    onClick={() => filterLevel(item.filterType)}
+                    variant={activeButton === item.filterType ? "active" : ""}
                     key={item.id}
-                    name={item.name}
-                  />
+                  >
+                    {item.name}
+                  </MainButton>
                 ))}
               </div>
             </div>
@@ -97,13 +139,16 @@ export default function SectionFastPick({ lang, language }) {
               </p>
               <div className="flex items-center gap-2 flex-wrap justify-between">
                 {buttonsDuration.map((item) => (
-                  <FilterButton
+                  <MainButton
                     className={`${
                       styles.section_fast_pick__filter_button
                     } ${styles.section_fast_pick__filter_button_duration}`}
+                    onClick={() => filterDays(item.filterType)}
+                    variant={activeButton === item.filterType ? "active" : ""}
                     key={item.id}
-                    name={item.name}
-                  />
+                  >
+                    {item.name}
+                  </MainButton>
                 ))}
               </div>
             </div>
@@ -145,21 +190,24 @@ export default function SectionFastPick({ lang, language }) {
         </div>
         <h3 className={styles.section_fast_pick__info_text}>
           {language[lang].fastPickButtonMoreTours} {visibleTours.length}{" "}
-          {language[lang].fastPickOf} {tours.length}
+          {language[lang].fastPickOf} {filerTours.length}
         </h3>
         <ul>
-          <p className={styles.section_fast_pick__info_text}>
-            {`${language[lang].fastPickPriceTour} ${sorted[0].price.toLocaleString("ru-RU")} ₽${" "}
-            ${language[lang].fastPickPpriceTourTo}
-            ${sorted[sorted.length - 1].price.toLocaleString("ru-RU")} ₽`}
-          </p>
+          {visibleTours.length > 0 && (
+            <p className={styles.section_fast_pick__info_text}>
+              {`${language[lang].fastPickPriceTour}
+              ${sorted[0].price.toLocaleString("ru-RU")} ₽
+              ${language[lang].fastPickPpriceTourTo}
+              ${sorted[sorted.length - 1].price.toLocaleString("ru-RU")} ₽`}
+            </p>
+          )}
 
-          {filteredTours.length === 0 ? (
+          {visibleTours.length === 0 ? (
             <h3 className={styles.section_fast_pick__info_text}>
               {language[lang].notFound}
             </h3>
           ) : (
-            filteredTours.map((item) => {
+            visibleTours.map((item) => {
               return (
                 <li className={styles.section_fast_pick__card} key={item.id}>
                   <img

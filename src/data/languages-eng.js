@@ -46,18 +46,22 @@ export const languageEng = {
             {
                 id: 1, 
                 name: 'Novice',
+                filterType: 'beginner',
             },
             {
                 id: 2, 
                 name: 'Intermediate',
+                filterType: 'Average',
             },
             {
                 id: 3, 
                 name: 'Pro',
+                filterType: 'Pro',
             },
             {
                 id: 4,
-                name: 'Crazy'
+                name: 'Crazy',
+                filterType: 'Crazy',
             }
         ],
 
@@ -65,19 +69,22 @@ export const languageEng = {
             {
                 id: 1, 
                 name: '1 Day',
+                filterType: '1days',
             },
             {
                 id: 2, 
                 name: '2-4 days',
+                filterType: '2-4days',
             },
             {
                 id: 3, 
                 name: '5-8 days',
-
+                filterType: '5-8days',
             },
             {
                 id: 4, 
                 name: '9+ days',
+                filterType: '9+days',
             },
         ],
     // Tours 
@@ -91,7 +98,8 @@ export const languageEng = {
                 level: 'beginner',
                 levelDisplay: 'Newbie',
                 daysDisplay: '1 day',
-                toursId: [1],
+                daysNumber: 2,
+                // toursId: [1],
             },
             {
                 id: 'Annapurna',
@@ -102,7 +110,8 @@ export const languageEng = {
                 level: 'Average',   
                 levelDisplay: 'Average',
                 daysDisplay: '7 days',
-                toursId: [2],
+                daysNumber: 7,
+                // toursId: [2],
             },
             {
                 id: 'Everest',
@@ -113,7 +122,8 @@ export const languageEng = {
                 level: 'Pro',   
                 levelDisplay: 'Pro',
                 daysDisplay: '12 days',
-                toursId: [3],
+                daysNumber: 12,
+                // toursId: [3],
             },
             {
                 id: 'Langtang',
@@ -124,7 +134,8 @@ export const languageEng = {
                 level: 'beginner',
                 levelDisplay: 'Newbie',
                 daysDisplay: '1 day',
-                toursId: [1],
+                daysNumber: 1,
+                // toursId: [1],
             }
         ],
 
@@ -142,7 +153,7 @@ export const languageEng = {
                 experience: '18 years of experience • 250+ ascents',
                 levelDisplay: ['Beginner', 'Average', 'Pro'],
                 level: ['beginner', 'Average', 'Pro'],
-                toursId: [1,2,3]
+                // toursId: [1,2,3]
             },
             {
                 id: 2,
@@ -152,7 +163,7 @@ export const languageEng = {
                 experience: '12 years of experience • Extreme',
                 levelDisplay: ['Pro', 'Average',],
                 level: ['Pro', 'Average'],
-                toursId: [3,4]
+                // toursId: [3,4]
             },
             {
                 id: 3,
@@ -162,7 +173,7 @@ export const languageEng = {
                 experience: '8 years of experience • Cultural guide',
                 levelDisplay: ['Beginner', 'Average'],
                 level: ['beginner', 'Average'],
-                toursId: [1,2]
+                // toursId: [1,2]
             },
         ],
 
