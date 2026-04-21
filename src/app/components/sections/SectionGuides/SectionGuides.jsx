@@ -40,6 +40,7 @@ export default function SectionGuides({ lang, language }) {
                 {guide.experience}
               </p>
             </div>
+            {/* Тут Раьотеам */}
             <MainButton
               className={styles.section_guides__button}
               variant="myBookings"

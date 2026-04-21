@@ -26,6 +26,12 @@ export default function SectionFastPick({ lang, language }) {
   }
 
   //  Для кнопок
+  function handleReset() {
+    setFilerTours(tours);
+    setValue("");
+    setTour(2);
+    setActiveButton("");
+  }
   function filterLevel(filterType) {
     setActiveButton(filterType);
 
@@ -89,7 +95,10 @@ export default function SectionFastPick({ lang, language }) {
                 {language[lang].fastPickFilterTitle}
               </h3>
             </div>
-            <button className={styles.section_fast_pick__button_reset}>
+            <button
+              className={styles.section_fast_pick__button_reset}
+              onClick={handleReset}
+            >
               {language[lang].fastPickFilterButtonRest}
             </button>
           </div>
@@ -162,6 +171,7 @@ export default function SectionFastPick({ lang, language }) {
               className={`${styles.section_fast_pick__search_wrapper} ${styles.section_fast_pick__wrapper}`}
             >
               <input
+                value={value}
                 type="text"
                 id="price-input"
                 className={`${styles.section_fast_pick__price_input} `}
@@ -170,21 +180,6 @@ export default function SectionFastPick({ lang, language }) {
                 <p>0 ₽</p>
                 <p>100,000 ₽</p>
               </div>
-            </div>
-            <label
-              className={styles.section_fast_pick__filter_names}
-              htmlFor="sorting-input"
-            >
-              {language[lang].fastPickSortingInput}
-            </label>
-            <div
-              className={`${styles.section_fast_pick__search_wrapper} ${styles.section_fast_pick__wrapper}`}
-            >
-              <input
-                type="text"
-                id="sorting-input"
-                className={`${styles.section_fast_pick__price_input} `}
-              />
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const languageEng = {
         //  Header
         navLinks: [
             { to: "/tours", text: "Tours" },
-            { to: "/guides", text: "Guides" },
+            { to: "/gids", text: "Guides" },
             { to: "/about-us", text: "About us" },
         ],
 
@@ -28,7 +28,6 @@ export const languageEng = {
         fastPickDuration: 'Duration',
 
         fastPickPriceInput: 'Max. price',
-        fastPickSortingInput: 'Sorting',    
         
         fastPickButtonMoreTours: 'Turov shown',
         fastPickOf: 'of', 
@@ -147,6 +146,7 @@ export const languageEng = {
         guides: [
             {
                 id: 1,
+                url: 'tenzing-norgay',
                 img: 'src/images/guides/Tenzing.avif',
                 name: 'Tenzing Norgay',
                 motto: 'Slow is fast',
@@ -157,6 +157,7 @@ export const languageEng = {
             },
             {
                 id: 2,
+                url: 'lhakpa-sherpa',
                 img: 'src/images/guides/Lhakpa.jpg',
                 name: 'Lhakpa Sherpa',
                 motto: 'The peaks don\'t wait',
@@ -167,6 +168,7 @@ export const languageEng = {
             },
             {
                 id: 3,
+                url: 'anura-tamang',
                 img: 'src/images/guides/Anura.jpg',
                 name: 'Anura Tamang',
                 motto: 'Mountains are people',

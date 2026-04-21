@@ -1,4 +1,3 @@
-import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
 import Hero from "../../components/layout/Hero/Hero.jsx";
 import SectionFastPick from "../../components/sections/SectionFastPick/SectionFastPick.jsx";

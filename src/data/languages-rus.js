@@ -9,7 +9,7 @@ export const languageRus = {
         headerLogo: 'Путешествие к вершинам',
         navLinks: [
             { to: "/tours", text: "Туры" },
-            { to: "/guides", text: "Гиды" },
+            { to: "/gids", text: "Гиды" },
             { to: "/about-us", text: "О нас" },
         ],
         
@@ -29,7 +29,6 @@ export const languageRus = {
         fastPickDuration: 'Длительность',
 
         fastPickPriceInput: 'Макс. цена',
-        fastPickSortingInput: 'Сортировка',
 
         fastPickButtonMoreTours: 'Туров показано',
         fastPickOf: 'из', 
@@ -146,6 +145,7 @@ export const languageRus = {
         guides: [
             {
                 id: 1,
+                url: 'tenzing-norgay',
                 img: 'src/images/guides/Tenzing.avif',
                 name: 'Тензинг Норгей',
                 motto: 'Медленно — это быстро',
@@ -156,6 +156,7 @@ export const languageRus = {
             },
             {
                 id: 2,
+                url: 'lhakpa-sherpa',
                 img: 'src/images/guides/Lhakpa.jpg',
                 name: 'Лхакпа Шерпа',
                 motto: 'Вершины не ждут',
@@ -166,6 +167,7 @@ export const languageRus = {
             },
             {
                 id: 3,
+                url: 'anura-tamang',
                 img: 'src/images/guides/Anura.jpg',
                 name: 'Анура Таманг',
                 motto: 'Горы — это люди',
