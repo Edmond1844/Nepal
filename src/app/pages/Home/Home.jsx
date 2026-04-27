@@ -5,21 +5,13 @@ import SectionGuides from "../../components/sections/SectionGuides/SectionGuides
 import SectionAdvantages from "../../components/sections/SectionAdvantages/SectionAdvantages.jsx";
 import Footer from "../../components/layout/Footer/Footer.jsx";
 
-export default function Home({ lang, setLang, language }) {
-  const [colorTheme, setColorTheme] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    return saved === "light" || saved === "dark" || saved === "neon"
-      ? saved
-      : "light";
-  });
-
-  useEffect(() => {
-    document.body.classList.remove("theme-light", "theme-dark", "theme-neon");
-
-    document.body.classList.add(`theme-${colorTheme}`);
-    localStorage.setItem("theme", colorTheme);
-  }, [colorTheme]);
-
+export default function Home({
+  lang,
+  setLang,
+  language,
+  colorTheme,
+  setColorTheme,
+}) {
   return (
     <>
       <Hero

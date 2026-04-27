@@ -1,0 +1,23 @@
+.gids_wrapper {
+    padding: 25px;
+}
+
+.gids__title {
+    color: var(--color-title);
+
+    font: var(--h2-style-mobile);
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.gids__img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border-radius: 50px;
+    border: 2px solid var(--border-color);
+
+    margin-bottom: 25px;
+}

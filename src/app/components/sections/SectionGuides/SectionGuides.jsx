@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./SectionGuides.module.css";
 
 import MainButton from "../../ui/MainButton/MainButton";
@@ -9,22 +10,22 @@ export default function SectionGuides({ lang, language }) {
       <h2 className={styles.section_guides__title}>
         {language[lang].titleGuides}
       </h2>
-      <ul>
+      <ul className={styles.section_guides__list}>
         {guides.map((guide) => (
           <li className={styles.section_guides__card} key={guide.id}>
             <img
               className={styles.section_guides__img}
               src={guide.img}
-              alt="Гид"
+              alt={guide.name}
             />
             <div className={styles.section_guides__card_content}>
               <h4 className={styles.section_guides__name}>{guide.name}</h4>
               <p className={styles.section_guides__motto}>"{guide.motto}"</p>
-              <div className="flex gap-2 mb-2">
+              <div className={styles.section_guides__levels}>
                 {guide.levelDisplay.map((level, index) => (
                   <span
                     key={index}
-                    className={`${styles.section_fast_pick__card_level} ${
+                    className={`${styles.section_guides__level} ${
                       guide.level[index] === "Pro" ||
                       guide.level[index] === "Crazy"
                         ? styles.level_pro_crazy
@@ -40,13 +41,17 @@ export default function SectionGuides({ lang, language }) {
                 {guide.experience}
               </p>
             </div>
-            {/* Тут Раьотеам */}
-            <MainButton
-              className={styles.section_guides__button}
-              variant="myBookings"
+            <Link
+              className={styles.section_guides__link}
+              to={`/gids/${guide.url}`}
             >
-              {language[lang].buttonGides}
-            </MainButton>
+              <MainButton
+                className={styles.section_guides__button}
+                variant="myBookings"
+              >
+                {language[lang].buttonGides}
+              </MainButton>
+            </Link>
           </li>
         ))}
       </ul>

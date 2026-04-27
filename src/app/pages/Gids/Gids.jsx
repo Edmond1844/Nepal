@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import style from "./Gids.module.css";
 
 import Hero from "../../components/layout/Hero/Hero.jsx";
 import Footer from "../../components/layout/Footer/Footer.jsx";
 
-export default function Gids({ lang, setLang, language }) {
-  const [colorTheme, setColorTheme] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    return saved === "light" || saved === "dark" || saved === "neon"
-      ? saved
-      : "light";
-  });
-
-  useEffect(() => {
-    document.body.classList.remove("theme-light", "theme-dark", "theme-neon");
-
-    document.body.classList.add(`theme-${colorTheme}`);
-    localStorage.setItem("theme", colorTheme);
-  }, [colorTheme]);
-
+export default function Gids({
+  lang,
+  setLang,
+  language,
+  colorTheme,
+  setColorTheme,
+}) {
   const guides = language[lang].guides;
 
   return (
@@ -30,13 +22,19 @@ export default function Gids({ lang, setLang, language }) {
         colorTheme={colorTheme}
         setColorTheme={setColorTheme}
       />
-      <ul>
-        {guides.map((gid) => (
-          <li key={gid.id}>
-            <Link to={`/gids/${gid.url}`}>{gid.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <main className={`${style.gids_wrapper} container`}>
+        <h2 className={style.gids__title}>{language[lang].gidsTitle}</h2>
+        <ul>
+          {guides.map((gid) => (
+            <li key={gid.id}>
+              <Link to={`/gids/${gid.url}`}>
+                <img className={style.gids__img} src={gid.img} alt={gid.name} />
+                <p>{gid.name}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </main>
       <Footer lang={lang} language={language} />
     </>
   );

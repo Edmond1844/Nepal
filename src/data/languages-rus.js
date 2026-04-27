@@ -1,3 +1,5 @@
+import Gids from "../app/pages/Gids/Gids";
+
 export const languageRus = {
 	ru: {
 		language: "RU",
@@ -30,7 +32,7 @@ export const languageRus = {
 
         fastPickPriceInput: 'Макс. цена',
 
-        fastPickButtonMoreTours: 'Туров показано',
+        fastPickTourDisplayed: 'Туров показано',
         fastPickOf: 'из', 
 
         fastPickPriceTour: 'Цены туров от',
@@ -140,6 +142,10 @@ export const languageRus = {
         // Section guides
         titleGuides: 'Наши гиды',
         buttonGides: 'Профиль',
+
+        // Gids 
+        
+        gidsTitle: 'Наши гиды',
 
         // Guides
         guides: [

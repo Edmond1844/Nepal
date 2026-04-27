@@ -29,7 +29,7 @@ export const languageEng = {
 
         fastPickPriceInput: 'Max. price',
         
-        fastPickButtonMoreTours: 'Turov shown',
+        fastPickTourDisplayed: 'Turov shown',
         fastPickOf: 'of', 
 
         fastPickPriceTour: 'Tour prices from',
@@ -135,12 +135,15 @@ export const languageEng = {
                 daysDisplay: '1 day',
                 daysNumber: 1,
                 // toursId: [1],
-            }
+            }, 
         ],
 
         // Section guides
         titleGuides: 'Our guides',
         buttonGides: 'Profile',
+
+        // Gids 
+        gidsTitle: 'Our guides',
 
          // Guides
         guides: [
