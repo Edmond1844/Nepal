@@ -90,7 +90,7 @@ export const languageEng = {
         tours: [
             {
                 id: 'Tea-break',
-                img: './src/images/tours/Tea-break.png',
+                img: '/images/tours/Tea-break.png',
                 title: 'Tea break at altitude',
                 description: 'A comfortable walk with calendars in the Himalayas, lunch and constant Nepalese tea.',
                 price: 3500,
@@ -102,7 +102,7 @@ export const languageEng = {
             },
             {
                 id: 'Annapurna',
-                img: './src/images/tours/View.png',
+                img: '/images/tours/View.png',
                 title: 'Annapurna Circuit Trek',
                 description: 'A lighter version of the classic – 7 days instead of 14, the same types and without the extreme.',
                 price: 28000,
@@ -114,7 +114,7 @@ export const languageEng = {
             },
             {
                 id: 'Everest',
-                img: './src/images/tours/Everest.png',
+                img: '/images/tours/Everest.png',
                 title: 'Everest Base Camp',
                 description: 'A journey to the foot of the worlds highest peak. This isn\'t just trekking — it\'s a challenge',
                 price: 65000,
@@ -126,7 +126,7 @@ export const languageEng = {
             },
             {
                 id: 'Langtang',
-                img: './src/images/tours/View.png',
+                img: '/images/tours/View.png',
                 title: 'Langtang Valley',
                 description: 'The first high-altitude trek for beginners. Forests, yaks, silence, and panoramic views of the 7,000-meter peak.',
                 price: 18000,
@@ -150,35 +150,50 @@ export const languageEng = {
             {
                 id: 1,
                 url: 'tenzing-norgay',
-                img: 'src/images/guides/Tenzing.avif',
+                img: '/images/guides/Tenzing.avif',
                 name: 'Tenzing Norgay',
                 motto: 'Slow is fast',
-                experience: '18 years of experience • 250+ ascents',
-                levelDisplay: ['Beginner', 'Average', 'Pro'],
-                level: ['beginner', 'Average', 'Pro'],
-                // toursId: [1,2,3]
+
+                brief: {
+                    experience: '18 years of experience • 250+ ascents',
+                    levelDisplay: ['Beginner', 'Average', 'Pro'],
+                    level: ['beginner', 'Average', 'Pro'],
+                },
+
+                toursId: [1,2,3]
+
             },
             {
                 id: 2,
                 url: 'lhakpa-sherpa',
-                img: 'src/images/guides/Lhakpa.jpg',
+                img: '/images/guides/Lhakpa.jpg',
                 name: 'Lhakpa Sherpa',
                 motto: 'The peaks don\'t wait',
-                experience: '12 years of experience • Extreme',
-                levelDisplay: ['Pro', 'Average',],
-                level: ['Pro', 'Average'],
-                // toursId: [3,4]
-            },
+
+                brief: {
+                    experience: '12 years of experience • Extreme',
+                    levelDisplay: ['Pro', 'Average',],
+                    level: ['Pro', 'Average'],
+                },
+
+                toursId: [3,4]
+
+            },        
             {
                 id: 3,
                 url: 'anura-tamang',
-                img: 'src/images/guides/Anura.jpg',
+                img: '/images/guides/Anura.jpg',
                 name: 'Anura Tamang',
                 motto: 'Mountains are people',
-                experience: '8 years of experience • Cultural guide',
-                levelDisplay: ['Beginner', 'Average'],
-                level: ['beginner', 'Average'],
-                // toursId: [1,2]
+
+                brief: {
+                    experience: '8 years of experience • Cultural guide',
+                    levelDisplay: ['Beginner', 'Average'],
+                    level: ['beginner', 'Average'],
+                },
+
+                toursId: [1,2]
+
             },
         ],
 

@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./app/pages/Home/Home";
 import Tours from "./app/pages/Tours/Tours";
 import Gids from "./app/pages/Gids/Gids";
-import Gid from "./app/pages/Gids/Gid/Gid";
+import Gid from "./app/pages/Gid/Gid";
 import AboutUs from "./app/pages/AboutUs/AboutUs";
 
 function App() {

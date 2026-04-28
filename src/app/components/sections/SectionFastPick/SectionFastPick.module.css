@@ -276,6 +276,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
+    
     .section_fast_pick__filter_wrapper {
         width: 370px;
         height: 540px;

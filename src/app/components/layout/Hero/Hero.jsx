@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import styles from "./Hero.module.css";
-import heroBackgroundMobile from "../../../../images/hero/hero-mobile.png";
-import heroBackgroundDesktop from "../../../../images/hero/hero-desktop.png";
+import heroBackgroundMobile from "/images/hero/hero-mobile.png";
+import heroBackgroundDesktop from "/images/hero/hero-desktop.png";
 
 import Header from "../Header/Header";
 import MainButton from "../../ui/MainButton/MainButton";

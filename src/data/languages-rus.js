@@ -91,7 +91,7 @@ export const languageRus = {
         tours: [
             {
                 id: 'Tea-break',
-                img: './src/images/tours/Tea-break.png',
+                img: '/images/tours/Tea-break.png',
                 title: 'Чай-брейк на высоте',
                 description: 'Комфортная прогулка с видами на Гималаи, обед инастоящий непальский чай.',
                 price: 3500,
@@ -103,7 +103,7 @@ export const languageRus = {
             },
             {
                 id: 'Annapurna',
-                img: './src/images/tours/View.png',
+                img: '/images/tours/View.png',
                 title: 'Трек вокруг Аннапурны',
                 description: 'Облегченная версия классики — 7 дней вместо 14, те же виды и без экстрима.',
                 price: 28000,
@@ -115,7 +115,7 @@ export const languageRus = {
             },
             {
                 id: 'Everest',
-                img: './src/images/tours/Everest.png',
+                img: '/images/tours/Everest.png',
                 title: 'Базовый лагерь Эвереста',
                 description: 'Путешествие к подножию высочайшей вершины мира. Это не просто трекинг — это вызов.',
                 price: 65000,
@@ -127,7 +127,7 @@ export const languageRus = {
             },
             {
                 id: 'Langtang',
-                img: './src/images/tours/View.png',
+                img: '/images/tours/View.png',
                 title: 'Долина Лангтанг',
                 description: 'Первый высотный трек для новичков. Леса, яки, тишина и панорамы на 7000м пики.',
                 price: 18000,
@@ -152,35 +152,55 @@ export const languageRus = {
             {
                 id: 1,
                 url: 'tenzing-norgay',
-                img: 'src/images/guides/Tenzing.avif',
+                img: '/images/guides/Tenzing.avif',
                 name: 'Тензинг Норгей',
                 motto: 'Медленно — это быстро',
-                experience: '18 лет опыта • 250+ восхождений',
-                levelDisplay: ['Новичок', 'Средний', 'Профи'],
-                level: ['beginner', 'Average', 'Pro'],
-                toursId: [1,2,3]
+
+                brief: {
+                    experience: '18 лет опыта • 250+ восхождений',
+                    levelDisplay: ['Новичок', 'Средний', 'Профи'],
+                    level: ['beginner', 'Average', 'Pro'],
+                },
+
+                toursId: [1,2,3],
+
+                details: {
+                    label: 'Опыт',
+                    value: '18 лет'
+                }
+
             },
             {
                 id: 2,
                 url: 'lhakpa-sherpa',
-                img: 'src/images/guides/Lhakpa.jpg',
+                img: '/images/guides/Lhakpa.jpg',
                 name: 'Лхакпа Шерпа',
                 motto: 'Вершины не ждут',
-                experience: '12 лет опыта • Экстремал',
-                levelDisplay: ['Профи', 'Средний',],
-                level: ['Pro', 'Average'],
+
+                brief: {
+                    experience: '12 лет опыта • Экстремал',
+                    levelDisplay: ['Профи', 'Средний',],
+                    level: ['Pro', 'Average'],
+                },
+
                 toursId: [3,4]
-            },
+
+            },        
             {
                 id: 3,
                 url: 'anura-tamang',
-                img: 'src/images/guides/Anura.jpg',
+                img: '/images/guides/Anura.jpg',
                 name: 'Анура Таманг',
                 motto: 'Горы — это люди',
-                experience: '8 лет опыта • Культурный гид',
-                levelDisplay: ['Новичок', 'Средний'],
-                level: ['beginner', 'Average'],
+
+                brief: {
+                    experience: '8 лет опыта • Культурный гид',
+                    levelDisplay: ['Новичок', 'Средний'],
+                    level: ['beginner', 'Average'],
+                },
+
                 toursId: [1,2]
+
             },
         ],
 

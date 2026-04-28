@@ -22,23 +22,23 @@ export default function SectionGuides({ lang, language }) {
               <h4 className={styles.section_guides__name}>{guide.name}</h4>
               <p className={styles.section_guides__motto}>"{guide.motto}"</p>
               <div className={styles.section_guides__levels}>
-                {guide.levelDisplay.map((level, index) => (
+                {guide.brief.levelDisplay.map((level, index) => (
                   <span
                     key={index}
                     className={`${styles.section_guides__level} ${
-                      guide.level[index] === "Pro" ||
-                      guide.level[index] === "Crazy"
+                      guide.brief.level[index] === "Pro" ||
+                      guide.brief.level[index] === "Crazy"
                         ? styles.level_pro_crazy
                         : ""
                     }`}
-                    data-level={guide.level[index]}
+                    data-level={guide.brief.level[index]}
                   >
                     {level}
                   </span>
                 ))}
               </div>
               <p className={styles.section_guides__experience}>
-                {guide.experience}
+                {guide.brief.experience}
               </p>
             </div>
             <Link
