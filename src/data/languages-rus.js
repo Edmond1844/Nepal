@@ -144,8 +144,14 @@ export const languageRus = {
         buttonGides: 'Профиль',
 
         // Gids 
-        
         gidsTitle: 'Наши гиды',
+
+        backToGuides: 'Назад к гидам',
+        writeButton: 'Написать',
+
+        aboutGid: 'О гиде',
+        specializationGid: 'Специализация',
+        leadTours: 'Ведет туры',
 
         // Guides
         guides: [
@@ -162,14 +168,40 @@ export const languageRus = {
                     level: ['beginner', 'Average', 'Pro'],
                 },
 
-                toursId: [1,2,3],
-
                 details: {
                     label: 'Опыт',
                     value: '18 лет'
-                }
+                },
 
+                language: {
+                    label: 'Языки',
+                    value: 'Русский, Английский, Непали'
+                }, 
+
+                favoriteRoute: {
+                    label: 'Любимый маршрут',
+                    value: 'Базовый лагерь Эвереста'
+                },
+
+                about: '18 лет опыта, 250+ восхождений. Знает каждый камень на Эвересте. Тензинг — это гид, которому доверяют жизнь. Спокойный, невозмутимый, с почти дзен-буддистским спокойствием. Его фраза "Медленно — это быстро" стала мантрой для многих начинающих треккеров. Он знает, когда остановиться, когда продолжить, и как сделать так, чтобы каждый участник группы чувствовал себя в безопасности.',
+
+                favoriteAltitude: {
+                    label: 'Любимая высота',
+                    value: '5,200 м — там, где воздух еще позволяет дышать, но уже чувствуешь себя на вершине мира.'
+                },
+
+                specializations: [
+                    'Базовый лагерь Эвереста',
+                    'Треки для новичков',
+                    'Акклиматизация',
+                    'Высотная медицина',
+                    'Фотография в горах'
+                ],
+
+                toursId: [1,2,3],
             },
+
+            
             {
                 id: 2,
                 url: 'lhakpa-sherpa',
@@ -183,8 +215,22 @@ export const languageRus = {
                     level: ['Pro', 'Average'],
                 },
 
-                toursId: [3,4]
+                toursId: [3,4],
 
+                details: {
+                    label: 'Опыт',
+                    value: '12 лет'
+                },
+
+                language: {
+                    label: 'Языки',
+                    value: 'Русский, Английский'
+                }, 
+
+                favoriteRoute: {
+                    label: 'Любимый маршрут',
+                    value: 'Базовый лагерь Эвереста'
+                }
             },        
             {
                 id: 3,
@@ -199,7 +245,23 @@ export const languageRus = {
                     level: ['beginner', 'Average'],
                 },
 
-                toursId: [1,2]
+                toursId: [1,2],
+
+                details: {
+                    label: 'Опыт',
+                    value: '8 лет'
+                },
+
+                language: {
+                    label: 'Языки',
+                    value: 'Русский, Английский'
+                }, 
+
+                favoriteRoute: {
+                    label: 'Любимый маршрут',
+                    value: 'Трек вокруг Аннапурны'
+                }
+
 
             },
         ],

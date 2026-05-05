@@ -144,6 +144,12 @@ export const languageEng = {
 
         // Gids 
         gidsTitle: 'Our guides',
+        backToGuides: 'Back to guides',
+        writeButton: 'Write',
+
+        aboutGid: 'About guide',
+        specializationGid: 'Specialization',
+        leadTours: 'Lead tours',
 
          // Guides
         guides: [
@@ -160,7 +166,38 @@ export const languageEng = {
                     level: ['beginner', 'Average', 'Pro'],
                 },
 
-                toursId: [1,2,3]
+                
+                details: {
+                    label: 'Experience',
+                    value: '18 years'
+                },
+
+                language: {
+                    label: 'Language',
+                    value: 'English'
+                },
+                
+                favoriteRoute: {
+                    label: 'Favorite route',
+                    value: 'Everest Base Camp'
+                },
+
+                about: '18 years of experience, 250+ ascents. Knows every stone on Everest. Tenzing is a guide trusted with life. Calm, imperturbable, with almost Zen-Buddhist serenity. His phrase "Slow is fast" has become a mantra for many beginner trekkers. He knows when to stop, when to continue, and how to make every member of the group feel safe.',
+                                
+                favoriteAltitude: {
+                    label: 'Favorite altitude',
+                    value: '5,200 m — where the air still allows you to breathe, but you already feel like you are on top of the world.'
+                },
+
+                specializations: [
+                    'Everest Base Camp',
+                    'Beginner Treks',
+                    'Acclimatization',
+                    'Altitude Medicine',
+                    'Mountain Photography'
+                ],
+
+                toursId: [1,2,3],
 
             },
             {
@@ -176,8 +213,22 @@ export const languageEng = {
                     level: ['Pro', 'Average'],
                 },
 
-                toursId: [3,4]
+                toursId: [3,4],
 
+                details: {
+                    label: 'Experience',
+                    value: '12 years'
+                },
+
+                language: {
+                    label: 'Languages',
+                    value: 'Russian, English'
+                }, 
+
+                favoriteRoute: {
+                    label: 'Favorite route',
+                    value: 'Everest Base Camp'
+                }
             },        
             {
                 id: 3,
@@ -192,7 +243,22 @@ export const languageEng = {
                     level: ['beginner', 'Average'],
                 },
 
-                toursId: [1,2]
+                toursId: [1,2], 
+
+                details: {
+                    label: 'Experience',
+                    value: '8 years'
+                },
+
+                language: {
+                    label: 'Languages',
+                    value: 'Russian, English'
+                }, 
+
+                favoriteRoute: {
+                    label: 'Favorite route',
+                    value: 'Annapurna Circuit Trek'
+                }
 
             },
         ],

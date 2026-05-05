@@ -62,6 +62,40 @@ ul, li{
   margin: 0 auto;
 }
 
+.level {
+    padding: 4px 10px;
+    
+    border-radius: 16px;
+}
+
+.level[data-level="beginner"] {
+    background-color: var(--level-beginner-bg);
+    color: var(--level-color-text);
+    box-shadow: 0px 0px 15px var(--level-shadow-beginner);
+}
+
+.level[data-level="Average"] {
+    background-color: var(--level-average-bg);
+    color: var(--level-color-text);
+    box-shadow: 0px 0px 15px var(--level-shadow-average);
+}
+
+.level[data-level="Pro"] {
+    background-color: var(--level-pro-bg);
+    color: var(--level-color-text);
+    box-shadow: 0px 0px 15px var(--level-shadow-pro);
+}
+
+.level[data-level="Crazy"] {
+    background-color: var(--level-expert-bg);
+    color: var(--level-color-text);
+    box-shadow: 0px 0px 15px var(--level-shadow-expert);
+}
+
+.level.level_pro_crazy {
+    color: var(--level-pro-crazy-text);
+}
+
 @media (min-width: 1440px) {
   .container {
     max-width: 1520px;

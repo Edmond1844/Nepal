@@ -25,7 +25,7 @@ export default function SectionGuides({ lang, language }) {
                 {guide.brief.levelDisplay.map((level, index) => (
                   <span
                     key={index}
-                    className={`${styles.section_guides__level} ${
+                    className={`${styles.section_guides__level} level ${
                       guide.brief.level[index] === "Pro" ||
                       guide.brief.level[index] === "Crazy"
                         ? styles.level_pro_crazy

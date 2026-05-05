@@ -209,7 +209,7 @@ export default function SectionFastPick({ lang, language }) {
                       <div className="p-4">
                         <div className="flex justify-between mb-2">
                           <span
-                            className={`${styles.section_fast_pick__card_level} ${item.level === "Pro" || item.level === "Crazy" ? styles.level_pro_crazy : ""} `}
+                            className={`${styles.section_fast_pick__card_level} ${item.level === "Pro" || item.level === "Crazy" ? styles.level_pro_crazy : ""} level`}
                             data-level={item.level}
                           >
                             {item.levelDisplay}

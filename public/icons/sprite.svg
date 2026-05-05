@@ -55,6 +55,22 @@
         <path d="M10 1V4" stroke="currentColor" stroke-width="2"/>
         <path d="M14 1V4" stroke="currentColor" stroke-width="2"/>
     </symbol>
+    <!-- Иконки для карточки гида -->
+    <symbol viewBox="0 0 20 21" fill="none" id="icon-experience">
+        <path d="M10.0001 12.5C13.2217 12.5 15.8334 9.88831 15.8334 6.66665C15.8334 3.44499 13.2217 0.833313 10.0001 0.833313C6.77842 0.833313 4.16675 3.44499 4.16675 6.66665C4.16675 9.88831 6.77842 12.5 10.0001 12.5Z" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M6.84159 11.575L5.83325 19.1667L9.99992 16.6667L14.1666 19.1667L13.1583 11.5667" stroke="currentColor" stroke-width="1.66667"/>
+    </symbol>
+    <symbol viewBox="0 0 20 20" fill="none" id="icon-lang">
+        <path d="M4.16675 6.66669L9.16675 11.6667" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M3.33325 11.6667L8.33325 6.66669L9.99992 4.16669" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M1.66675 4.16669H11.6667" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M5.83325 1.66669H6.66659" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M18.3333 18.3333L14.1667 10L10 18.3333" stroke="currentColor" stroke-width="1.66667"/>
+        <path d="M11.6667 15H16.6667" stroke="currentColor" stroke-width="1.66667"/>
+    </symbol>
+    <symbol viewBox="0 0 17 18" fill="none" id="icon-write">
+        <path d="M15.8333 10.8333C15.8333 11.2753 15.6577 11.6993 15.3451 12.0118C15.0325 12.3244 14.6086 12.5 14.1666 12.5H4.16659L0.833252 15.8333V2.49998C0.833252 2.05795 1.00885 1.63403 1.32141 1.32147C1.63397 1.00891 2.05789 0.833313 2.49992 0.833313H14.1666C14.6086 0.833313 15.0325 1.00891 15.3451 1.32147C15.6577 1.63403 15.8333 2.05795 15.8333 2.49998V10.8333Z" stroke="currentColor" stroke-width="1.66667"/>
+    </symbol>
 
 
 </svg>

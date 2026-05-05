@@ -107,48 +107,6 @@
     min-height: 37px;
 }
 
-.section_guides__level {
-    font-family: var(--font-inter);
-    font-size: var(--text-xs);
-    font-weight: var(--fw-bold);
-
-    display: flex;
-    justify-content: center;
-
-    padding: 4px 10px;
-    
-    border-radius: 16px;
-}
-
-.section_guides__level[data-level="beginner"] {
-    background-color: var(--level-beginner-bg);
-    color: var(--level-color-text);
-    box-shadow: 0px 0px 15px var(--level-shadow-beginner);
-}
-
-.section_guides__level[data-level="Average"] {
-    background-color: var(--level-average-bg);
-    color: var(--level-color-text);
-    box-shadow: 0px 0px 15px var(--level-shadow-average);
-}
-
-.section_guides__level[data-level="Pro"] {
-    background-color: var(--level-pro-bg);
-    color: var(--level-color-text);
-    box-shadow: 0px 0px 15px var(--level-shadow-pro);
-}
-
-.section_guides__level[data-level="Crazy"] {
-    background-color: var(--level-expert-bg);
-    color: var(--level-color-text);
-    box-shadow: 0px 0px 15px var(--level-shadow-expert);
-}
-
-.section_guides__level.level_pro_crazy {
-    color: var(--level-pro-crazy-text);
-}
-
-
 @media (min-width: 1440px) {
     .section_guides__title {
         font: var(--h2-style);
