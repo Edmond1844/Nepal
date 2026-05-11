@@ -21,6 +21,10 @@
     font-size: var(--text-base);
 }
 
+.gid_card__wrapper{
+    margin-bottom: 20px;
+}
+
 .gid_card__icon_arrow {
     width: 20px;
     height: 20px;
@@ -121,7 +125,7 @@
     margin-bottom: 25px;
 }
 
-.gid_card__about_title {
+.gid_card__title {
     font: var(--h2-style-mobile);
     color: var(--color-title);
     margin-bottom: 16px;
@@ -189,6 +193,7 @@
         margin: 0;
 
         width: 405px;
+        min-height: 574px;
     }
 
     .gid_card__back_link {
@@ -209,7 +214,7 @@
         margin-bottom: 35px;
     }
 
-    .gid_card__about_title {
+    .gid_card__title {
         font: var(--h2-style);
     }
 

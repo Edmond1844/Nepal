@@ -1,10 +1,12 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 
-import style from "./Gid.module.css";
+import styles from "./Gid.module.css";
 
 import Layout from "../../components/layout/Layout/Layout";
 import Icon from "../../components/ui/Icon/Icon";
+import ToursList from "../../components/ui/ToursList/ToursList";
 import MainButton from "../../components/ui/MainButton/MainButton";
 
 export default function Gid({
@@ -15,9 +17,12 @@ export default function Gid({
   setColorTheme,
 }) {
   const guides = language[lang].guides;
+  const allTours = language[lang].tours;
 
   const { slug } = useParams();
   const gid = guides.find((gid) => gid.url === slug);
+
+  const guideTours = allTours.filter((tour) => gid.toursId.includes(tour.id));
 
   return (
     <>
@@ -28,76 +33,80 @@ export default function Gid({
         colorTheme={colorTheme}
         setColorTheme={setColorTheme}
       >
-        <div className={`${style.gid_card} container`}>
-          <Link className={style.gid_card__back_link} to="/gids">
-            <ArrowLeft className={style.gid_card__icon_arrow} />
+        <div className={`${styles.gid_card} container`}>
+          <Link className={styles.gid_card__back_link} to="/gids">
+            <ArrowLeft className={styles.gid_card__icon_arrow} />
             <span>{language[lang].backToGuides}</span>
           </Link>
-          <div className={style.gid_card__main_info}>
-            <img className={style.gid_card__img} src={gid.img} alt={gid.name} />
-            <h3 className={style.gid_card__gid_name}>{gid.name}</h3>
-            <p className={style.gid_card__motto}>"{gid.motto}"</p>
-            <div className={style.gid_card__stat_item}>
-              <Icon className={style.gid_card__icon} name="icon-experience" />
+          <div className={styles.gid_card__main_info}>
+            <img
+              className={styles.gid_card__img}
+              src={gid.img}
+              alt={gid.name}
+            />
+            <h3 className={styles.gid_card__gid_name}>{gid.name}</h3>
+            <p className={styles.gid_card__motto}>"{gid.motto}"</p>
+            <div className={styles.gid_card__stat_item}>
+              <Icon className={styles.gid_card__icon} name="icon-experience" />
               <div>
-                <p className={style.gid_card__experience_label}>
+                <p className={styles.gid_card__experience_label}>
                   {gid.details.label}
                 </p>
-                <p className={style.gid_card__experience_value}>
+                <p className={styles.gid_card__experience_value}>
                   {gid.details.value}
                 </p>
               </div>
             </div>
-            <div className={style.gid_card__stat_item}>
-              <Icon className={style.gid_card__icon} name="icon-lang" />
+            <div className={styles.gid_card__stat_item}>
+              <Icon className={styles.gid_card__icon} name="icon-lang" />
               <div>
-                <p className={style.gid_card__experience_label}>
+                <p className={styles.gid_card__experience_label}>
                   {gid.language.label}
                 </p>
-                <p className={style.gid_card__experience_value}>
+                <p className={styles.gid_card__experience_value}>
                   {gid.language.value}
                 </p>
               </div>
             </div>
-            <div className={style.gid_card__stat_item}>
-              <Icon className={style.gid_card__icon} name="icon-mountain" />
+            <div className={styles.gid_card__stat_item}>
+              <Icon className={styles.gid_card__icon} name="icon-mountain" />
               <div>
-                <p className={style.gid_card__experience_label}>
+                <p className={styles.gid_card__experience_label}>
                   {gid.favoriteRoute.label}
                 </p>
-                <p className={style.gid_card__experience_value}>
+                <p className={styles.gid_card__experience_value}>
                   {gid.favoriteRoute.value}
                 </p>
               </div>
             </div>
-            <MainButton className={style.gid_card__button}>
+            <MainButton className={styles.gid_card__button}>
               <Icon name="icon-write" />
               {language[lang].writeButton}
             </MainButton>
           </div>
-          <div className={style.gid_card__content}>
-            <div className={style.gid_card__wrapper}>
-              <h2 className={style.gid_card__about_title}>
+          <div className={styles.gid_card__content}>
+            <div className={styles.gid_card__wrapper}>
+              <h2 className={styles.gid_card__title}>
                 {language[lang].aboutGid}
               </h2>
-              <p className={style.gid_card__about}>{gid.about}</p>
+              <p className={styles.gid_card__about}>{gid.about}</p>
               {gid.favoriteAltitude && (
-                <p className={style.gid_card__favorite}>
-                  <span className={style.gid_card__favorite_label}>
+                <p className={styles.gid_card__favorite}>
+                  <span className={styles.gid_card__favorite_label}>
                     {gid.favoriteAltitude.label}:
                   </span>{" "}
                   {gid.favoriteAltitude.value}
                 </p>
               )}
             </div>
-            <div className={style.gid_card__wrapper}>
-              <h2 className={style.gid_card__about_title}>
+            <div className={styles.gid_card__wrapper}>
+              <h2 className={styles.gid_card__title}>
                 {language[lang].specializationGid}
               </h2>
-              <ul className={style.gid_card__specializations_list}>
+              <ul className={styles.gid_card__specializations_list}>
                 {gid.specializations.map((item, index) => (
                   <li
-                    className={style.gid_card__specialization_item}
+                    className={styles.gid_card__specialization_item}
                     key={index}
                   >
                     {item}
@@ -105,14 +114,14 @@ export default function Gid({
                 ))}
               </ul>
             </div>
-            <div>
-              <h2 className={style.gid_card__about_title}>
+            <div className={styles.gid_card__wrapper}>
+              <h2 className={styles.gid_card__title}>
                 {language[lang].leadTours}
               </h2>
-              <ul>
+              <ul className="flex gap-2">
                 {gid.brief.levelDisplay.map((item, index) => (
                   <li
-                    className={`${style.level_pro_crazy} level`}
+                    className={`${styles.level_pro_crazy} level`}
                     key={index}
                     data-level={gid.brief.level[index]}
                   >
@@ -120,6 +129,10 @@ export default function Gid({
                   </li>
                 ))}
               </ul>
+            </div>
+            <div>
+              <h2 className={styles.gid_card__title}>{gid.toursTitle}</h2>
+              <ToursList tours={guideTours} lang={lang} language={language} />
             </div>
           </div>
         </div>

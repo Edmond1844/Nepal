@@ -89,7 +89,7 @@ export const languageEng = {
     // Tours 
         tours: [
             {
-                id: 'Tea-break',
+                id: 1,
                 img: '/images/tours/Tea-break.png',
                 title: 'Tea break at altitude',
                 description: 'A comfortable walk with calendars in the Himalayas, lunch and constant Nepalese tea.',
@@ -98,10 +98,9 @@ export const languageEng = {
                 levelDisplay: 'Newbie',
                 daysDisplay: '1 day',
                 daysNumber: 2,
-                // toursId: [1],
             },
             {
-                id: 'Annapurna',
+                id: 2,
                 img: '/images/tours/View.png',
                 title: 'Annapurna Circuit Trek',
                 description: 'A lighter version of the classic – 7 days instead of 14, the same types and without the extreme.',
@@ -110,10 +109,9 @@ export const languageEng = {
                 levelDisplay: 'Average',
                 daysDisplay: '7 days',
                 daysNumber: 7,
-                // toursId: [2],
             },
             {
-                id: 'Everest',
+                id: 3,
                 img: '/images/tours/Everest.png',
                 title: 'Everest Base Camp',
                 description: 'A journey to the foot of the worlds highest peak. This isn\'t just trekking — it\'s a challenge',
@@ -122,7 +120,6 @@ export const languageEng = {
                 levelDisplay: 'Pro',
                 daysDisplay: '12 days',
                 daysNumber: 12,
-                // toursId: [3],
             },
             {
                 id: 'Langtang',
@@ -196,6 +193,8 @@ export const languageEng = {
                     'Altitude Medicine',
                     'Mountain Photography'
                 ],
+
+                toursTitle: 'Tours with Tenzing',
 
                 toursId: [1,2,3],
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./SectionFastPick.module.css";
 
 import Icon from "../../ui/Icon/Icon.jsx";
+import ToursList from "../../ui/ToursList/ToursList.jsx";
 import MainButton from "../../ui/MainButton/MainButton.jsx";
 
 export default function SectionFastPick({ lang, language }) {
@@ -189,61 +190,14 @@ export default function SectionFastPick({ lang, language }) {
             </div>
           </div>
           <div>
-            <ul className={styles.section_fast_pick__wrapper_tours}>
-              {visibleTours.length === 0 ? (
-                <h3 className={styles.section_fast_pick__info_text}>
-                  {language[lang].notFound}
-                </h3>
-              ) : (
-                visibleTours.map((item) => {
-                  return (
-                    <li
-                      className={styles.section_fast_pick__card}
-                      key={item.id}
-                    >
-                      <img
-                        className={styles.section_fast_pick__img}
-                        src={item.img}
-                        alt={item.title}
-                      />
-                      <div className="p-4">
-                        <div className="flex justify-between mb-2">
-                          <span
-                            className={`${styles.section_fast_pick__card_level} ${item.level === "Pro" || item.level === "Crazy" ? styles.level_pro_crazy : ""} level`}
-                            data-level={item.level}
-                          >
-                            {item.levelDisplay}
-                          </span>
-                          <span className={styles.section_fast_pick__days}>
-                            {item.daysDisplay}
-                          </span>
-                        </div>
-                        <h3 className={styles.section_fast_pick__card_title}>
-                          {item.title}
-                        </h3>
-                        <p
-                          className={styles.section_fast_pick__card_description}
-                        >
-                          {item.description}
-                        </p>
-                        <div className="flex justify-between">
-                          <span
-                            className={styles.section_fast_pick__card_price}
-                          >
-                            {`${item.price.toLocaleString("ru-RU")} ₽`}
-                          </span>
-                          <MainButton
-                            className={styles.section_fast_pick__card_button}
-                          >
-                            {language[lang].BottonMoreDetails}
-                          </MainButton>
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })
-              )}
-            </ul>
+            {visibleTours.length === 0 ? (
+              <h3 className={styles.section_fast_pick__info_text}>
+                {language[lang].notFound}
+              </h3>
+            ) : (
+              <ToursList lang={lang} language={language} tours={sorted} />
+            )}
+
             {hasMoreTours && (
               <MainButton
                 className={styles.section_fast_pick__button_more_details}

@@ -102,4 +102,9 @@ ul, li{
 
     margin: 0 auto;
   }
+
+  .level {
+    padding: 6px 14px;
+  }
 }
+

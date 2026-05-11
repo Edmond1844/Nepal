@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import style from "./Gids.module.css";
+import styles from "./Gids.module.css";
 
 import SectionGuides from "../../components/sections/SectionGuides/SectionGuides.jsx";
 
@@ -22,7 +22,7 @@ export default function Gids({
         colorTheme={colorTheme}
         setColorTheme={setColorTheme}
       />
-      <main className={`${style.gids_wrapper} container`}>
+      <main className={`${styles.gids_wrapper} container`}>
         <SectionGuides lang={lang} language={language} />
       </main>
       <Footer lang={lang} language={language} />
